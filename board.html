@@ -1,92 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Editorial Board - Editorial Studio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #000000;
   color: #ffffff;
-  line-height: 1.5;
-  font-size: 13px;
-  display: flex;
-  min-height: 100vh;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-button, input, select, textarea {
-  font: inherit;
-  color: inherit;
 }
 
 .sidebar {
   width: 220px;
   background-color: #0c0c0c;
-  color: #ffffff;
-  display: flex;
-  flex-direction: column;
+  border-right: 1px solid #222222;
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
   z-index: 100;
-  border-right: 1px solid #1f1f1f;
+  display: flex;
+  flex-direction: column;
 }
 
 .sidebar-header {
-  padding: 20px 16px;
-  border-bottom: 1px solid #1f1f1f;
-}
-
-.brand-title {
-  font-size: 15px;
-  font-weight: bold;
-  color: #ffffff;
-  letter-spacing: 0.5px;
-}
-
-.brand-sub {
-  font-size: 11px;
-  color: #777777;
-  margin-top: 3px;
+  padding: 18px 16px;
+  border-bottom: 1px solid #222222;
 }
 
 .sidebar-menu {
   flex: 1;
-  padding: 16px 10px;
+  padding: 14px 10px;
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
 
-.menu-label {
-  font-size: 10px;
-  font-weight: bold;
-  color: #555555;
-  text-transform: uppercase;
-  padding: 8px 10px 4px;
-  letter-spacing: 0.5px;
-}
-
 .nav-link {
   display: block;
-  padding: 9px 12px;
+  padding: 8px 12px;
   color: #888888;
   border-radius: 4px;
   font-size: 13px;
   font-weight: 500;
+  text-decoration: none;
 }
 
 .nav-link:hover {
@@ -95,28 +54,15 @@ button, input, select, textarea {
 }
 
 .nav-link.active {
-  background-color: #1f1f1f;
-  color: #ffffff;
+  background-color: #1c1c1c;
+  color: #ffffff !important;
+  border-left: 3px solid #f04023;
   font-weight: bold;
-  border-left: 2px solid #f04023;
-}
-
-.nav-link.btn-create {
-  background-color: #f04023;
-  color: #ffffff;
-  margin-top: 12px;
-  text-align: center;
-  font-weight: bold;
-  border-radius: 20px;
-}
-
-.nav-link.btn-create:hover {
-  background-color: #d63318;
 }
 
 .sidebar-user {
   padding: 14px 16px;
-  border-top: 1px solid #1f1f1f;
+  border-top: 1px solid #222222;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -124,8 +70,8 @@ button, input, select, textarea {
 }
 
 .user-avatar {
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   background-color: #f04023;
   color: #ffffff;
@@ -136,66 +82,10 @@ button, input, select, textarea {
   font-weight: bold;
 }
 
-.user-name {
-  font-size: 13px;
-  font-weight: bold;
-  color: #ffffff;
-}
-
-.user-role {
-  font-size: 11px;
-  color: #777777;
-}
-
 .main-content {
   margin-left: 220px;
-  flex: 1;
-  padding: 24px 28px;
-  min-width: 0;
-  background-color: #000000;
-}
-
-.page-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #0c0c0c;
-  padding: 18px 22px;
-  border: 1px solid #1f1f1f;
-  border-radius: 6px;
-  margin-bottom: 22px;
-}
-
-.page-title {
-  font-size: 22px;
-  font-weight: bold;
-  color: #ffffff;
-  letter-spacing: -0.3px;
-}
-
-.page-subtitle {
-  font-size: 12px;
-  color: #888888;
-  margin-top: 3px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 7px 15px;
-  font-size: 12px;
-  font-weight: bold;
-  border-radius: 18px;
-  text-align: center;
-  border: 1px solid #2a2a2a;
-  background-color: #141414;
-  color: #ffffff;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.btn:hover {
-  background-color: #202020;
-  border-color: #444444;
+  padding: 24px;
+  min-height: 100vh;
 }
 
 .btn-orange {
@@ -206,86 +96,7 @@ button, input, select, textarea {
 
 .btn-orange:hover {
   background-color: #d63318;
-}
-
-.btn-sm {
-  padding: 4px 10px;
-  font-size: 11px;
-}
-
-.board-columns {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  align-items: flex-start;
-}
-
-.board-column {
-  background-color: #0c0c0c;
-  border: 1px solid #1f1f1f;
-  border-radius: 6px;
-  padding: 14px;
-}
-
-.col-header {
-  font-size: 13px;
-  font-weight: bold;
   color: #ffffff;
-  margin-bottom: 14px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.col-count {
-  background-color: #1f1f1f;
-  color: #888888;
-  padding: 2px 7px;
-  border-radius: 10px;
-  font-size: 11px;
-}
-
-.board-card {
-  background-color: #141414;
-  border: 1px solid #242424;
-  border-radius: 6px;
-  padding: 14px;
-  margin-bottom: 12px;
-}
-
-.board-card:hover {
-  border-color: #333333;
-}
-
-.board-card-title {
-  font-size: 13px;
-  font-weight: bold;
-  color: #ffffff;
-  margin-bottom: 6px;
-  line-height: 1.4;
-}
-
-.board-card-desc {
-  font-size: 12px;
-  color: #777777;
-  margin-bottom: 10px;
-}
-
-.board-card-meta {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 11px;
-  color: #777777;
-  border-top: 1px solid #1e1e1e;
-  padding-top: 8px;
-  margin-top: 8px;
-}
-
-.author-chip {
-  display: flex;
-  align-items: center;
-  gap: 6px;
 }
 
 .author-dot {
@@ -302,41 +113,16 @@ button, input, select, textarea {
 }
 
 .author-dot.green {
-  background-color: #10b981;
+  background-color: #198754;
 }
 
-.badge {
-  display: inline-block;
-  padding: 2px 6px;
-  font-size: 10px;
-  font-weight: bold;
-  border-radius: 3px;
-  text-transform: uppercase;
-}
-
-.badge-tag {
-  background-color: #181818;
-  color: #888888;
-}
-
-@media (max-width: 900px) {
-  .board-columns {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 700px) {
-  body {
-    flex-direction: column;
-  }
+@media (max-width: 768px) {
   .sidebar {
     position: static;
     width: 100%;
-    min-height: auto;
   }
   .main-content {
     margin-left: 0;
-    padding: 16px;
   }
 }
   </style>
@@ -345,96 +131,104 @@ button, input, select, textarea {
 
   <div class="sidebar">
     <div class="sidebar-header">
-      <div class="brand-title">EDITORIAL STUDIO</div>
-      <div class="brand-sub">Mini Project 2026</div>
+      <div class="fw-bold text-white fs-6">EDITORIAL STUDIO</div>
+      <div class="text-secondary small">Mini Project 2026</div>
     </div>
 
     <div class="sidebar-menu">
-      <div class="menu-label">Navigation</div>
+      <div class="text-secondary text-uppercase px-2 py-1 small fw-bold" style="font-size: 10px;">Navigation</div>
       <a href="index.html" class="nav-link">Home (Landing)</a>
       <a href="dashboard.html" class="nav-link">Dashboard</a>
       <a href="content.html" class="nav-link">All Articles</a>
       <a href="board.html" class="nav-link active">Editorial Board</a>
-      <a href="editor.html" class="nav-link btn-create">+ Write Article</a>
+      <a href="editor.html" class="nav-link btn-orange rounded-pill text-center text-white mt-2 py-2 fw-bold">+ Write Article</a>
     </div>
 
     <div class="sidebar-user">
       <div class="user-avatar">D</div>
       <div>
-        <div class="user-name">Devansh</div>
-        <div class="user-role">Lead Editor</div>
+        <div class="fw-bold text-white small">Devansh</div>
+        <div class="text-secondary small" style="font-size: 11px;">Lead Editor</div>
       </div>
     </div>
   </div>
 
   <div class="main-content">
-    <div class="page-header">
-      <div>
-        <h1 class="page-title">Editorial Board</h1>
-        <p class="page-subtitle">Workflow stages of project articles.</p>
-      </div>
-      <div>
-        <a href="editor.html" class="btn btn-orange">+ Add Story</a>
+    <div class="card bg-dark border-secondary p-3 mb-4">
+      <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+        <div>
+          <h1 class="h4 text-white fw-bold mb-1">Editorial Board</h1>
+          <p class="text-secondary small mb-0">Visual pipeline of project articles across stages.</p>
+        </div>
+        <div>
+          <a href="editor.html" class="btn btn-orange btn-sm rounded-pill px-3 fw-bold">+ Add Story</a>
+        </div>
       </div>
     </div>
 
-    <div class="board-columns">
-      <div class="board-column">
-        <div class="col-header">
-          <span>Drafts</span>
-          <span class="col-count">1</span>
-        </div>
+    <div class="row g-3">
+      <div class="col-md-4">
+        <div class="card bg-dark border-secondary p-3 h-100">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <span class="fw-bold text-white">Drafts</span>
+            <span class="badge bg-secondary rounded-pill">1</span>
+          </div>
 
-        <div class="board-card">
-          <div class="board-card-title">Computer Networks Notes</div>
-          <div class="board-card-desc">OSI layer models and TCP protocol basics.</div>
-          <span class="badge badge-tag">Networking</span>
-          <div class="board-card-meta">
-            <div class="author-chip">
-              <span class="author-dot">D</span>
-              <span>Devansh</span>
+          <div class="card bg-black border-secondary p-3 mb-2">
+            <div class="fw-bold text-white small mb-1">Computer Networks Notes</div>
+            <div class="text-secondary small mb-2" style="font-size: 11px;">OSI layer models and TCP protocol basics.</div>
+            <span class="badge bg-secondary mb-2" style="width: fit-content; font-size: 10px;">Networking</span>
+            <div class="d-flex justify-content-between align-items-center pt-2 border-top border-secondary">
+              <div class="d-flex align-items-center gap-1">
+                <span class="author-dot">D</span>
+                <span class="text-secondary small" style="font-size: 11px;">Devansh</span>
+              </div>
+              <a href="editor.html" class="btn btn-outline-secondary btn-sm py-0 px-2" style="font-size: 11px;">Edit</a>
             </div>
-            <a href="editor.html" class="btn btn-sm">Edit</a>
           </div>
         </div>
       </div>
 
-      <div class="board-column">
-        <div class="col-header">
-          <span>In Review</span>
-          <span class="col-count">1</span>
-        </div>
+      <div class="col-md-4">
+        <div class="card bg-dark border-secondary p-3 h-100">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <span class="fw-bold text-white">In Review</span>
+            <span class="badge bg-warning text-dark rounded-pill">1</span>
+          </div>
 
-        <div class="board-card">
-          <div class="board-card-title">HTML5 &amp; CSS3 Project Guide</div>
-          <div class="board-card-desc">Semantic structure and responsive web design.</div>
-          <span class="badge badge-tag">Web Dev</span>
-          <div class="board-card-meta">
-            <div class="author-chip">
-              <span class="author-dot">D</span>
-              <span>Devansh</span>
+          <div class="card bg-black border-secondary p-3 mb-2">
+            <div class="fw-bold text-white small mb-1">HTML5 &amp; CSS3 Project Guide</div>
+            <div class="text-secondary small mb-2" style="font-size: 11px;">Semantic structure and responsive web design.</div>
+            <span class="badge bg-secondary mb-2" style="width: fit-content; font-size: 10px;">Web Dev</span>
+            <div class="d-flex justify-content-between align-items-center pt-2 border-top border-secondary">
+              <div class="d-flex align-items-center gap-1">
+                <span class="author-dot">D</span>
+                <span class="text-secondary small" style="font-size: 11px;">Devansh</span>
+              </div>
+              <a href="editor.html" class="btn btn-orange btn-sm py-0 px-2" style="font-size: 11px;">Review</a>
             </div>
-            <a href="editor.html" class="btn btn-sm btn-orange">Review</a>
           </div>
         </div>
       </div>
 
-      <div class="board-column">
-        <div class="col-header">
-          <span>Published</span>
-          <span class="col-count">1</span>
-        </div>
+      <div class="col-md-4">
+        <div class="card bg-dark border-secondary p-3 h-100">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <span class="fw-bold text-white">Published</span>
+            <span class="badge bg-success rounded-pill">1</span>
+          </div>
 
-        <div class="board-card">
-          <div class="board-card-title">Database Management Systems</div>
-          <div class="board-card-desc">Relational schema design and SQL indexing.</div>
-          <span class="badge badge-tag">Database</span>
-          <div class="board-card-meta">
-            <div class="author-chip">
-              <span class="author-dot green">A</span>
-              <span>Ayush</span>
+          <div class="card bg-black border-secondary p-3 mb-2">
+            <div class="fw-bold text-white small mb-1">Database Management Systems</div>
+            <div class="text-secondary small mb-2" style="font-size: 11px;">Relational schema design and SQL indexing.</div>
+            <span class="badge bg-secondary mb-2" style="width: fit-content; font-size: 10px;">Database</span>
+            <div class="d-flex justify-content-between align-items-center pt-2 border-top border-secondary">
+              <div class="d-flex align-items-center gap-1">
+                <span class="author-dot green">A</span>
+                <span class="text-secondary small" style="font-size: 11px;">Ayush</span>
+              </div>
+              <span class="badge bg-success" style="font-size: 10px;">Live</span>
             </div>
-            <span style="font-size: 10px; color: #10b981; font-weight: bold;">Live</span>
           </div>
         </div>
       </div>
