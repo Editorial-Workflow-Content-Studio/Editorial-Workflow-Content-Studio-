@@ -175,7 +175,7 @@ button, input, select, textarea {
 
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 15px;
   margin-bottom: 20px;
 }
@@ -190,10 +190,6 @@ button, input, select, textarea {
 
 .stat-card.orange {
   border-left-color: #fd7e14;
-}
-
-.stat-card.blue {
-  border-left-color: #17a2b8;
 }
 
 .stat-card.green {
@@ -284,30 +280,14 @@ tr:hover {
   text-transform: uppercase;
 }
 
-.badge-draft {
-  background-color: #e9ecef;
-  color: #495057;
-}
-
 .badge-review {
   background-color: #fff3cd;
   color: #856404;
 }
 
-.badge-scheduled {
-  background-color: #d1ecf1;
-  color: #0c5460;
-}
-
 .badge-published {
   background-color: #d4edda;
   color: #155724;
-}
-
-.badge-tag {
-  background-color: #e9ecef;
-  color: #495057;
-  font-size: 10px;
 }
 
 .btn {
@@ -337,16 +317,6 @@ tr:hover {
   background-color: #0069d9;
 }
 
-.btn-success {
-  background-color: #28a745;
-  color: #ffffff;
-  border-color: #28a745;
-}
-
-.btn-success:hover {
-  background-color: #218838;
-}
-
 .btn-secondary {
   background-color: #6c757d;
   color: #ffffff;
@@ -357,273 +327,9 @@ tr:hover {
   background-color: #5a6268;
 }
 
-.btn-danger {
-  background-color: #dc3545;
-  color: #ffffff;
-  border-color: #dc3545;
-}
-
-.btn-danger:hover {
-  background-color: #c82333;
-}
-
 .btn-sm {
   padding: 3px 8px;
   font-size: 11px;
-}
-
-.filter-bar {
-  background-color: #ffffff;
-  border: 1px solid #dcdcdc;
-  border-radius: 4px;
-  padding: 10px 15px;
-  margin-bottom: 18px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.filter-group {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.form-control {
-  padding: 6px 10px;
-  font-size: 13px;
-  border: 1px solid #ced4da;
-  border-radius: 3px;
-  background-color: #ffffff;
-  font-family: inherit;
-}
-
-.form-control:focus {
-  border-color: #007bff;
-  outline: none;
-}
-
-.pagination {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 15px;
-  font-size: 12px;
-  color: #666666;
-}
-
-.page-link {
-  padding: 4px 8px;
-  border: 1px solid #007bff;
-  border-radius: 3px;
-  background-color: #007bff;
-  color: #ffffff;
-}
-
-.board-columns {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
-  align-items: flex-start;
-}
-
-.board-column {
-  background-color: #e9edf0;
-  border: 1px solid #ced4da;
-  border-radius: 4px;
-  padding: 12px;
-}
-
-.col-header {
-  font-size: 13px;
-  font-weight: bold;
-  color: #2c3e50;
-  margin-bottom: 12px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.col-count {
-  background-color: #ced4da;
-  color: #2c3e50;
-  padding: 2px 6px;
-  border-radius: 10px;
-  font-size: 11px;
-}
-
-.board-card {
-  background-color: #ffffff;
-  border: 1px solid #dcdcdc;
-  border-radius: 4px;
-  padding: 12px;
-  margin-bottom: 10px;
-}
-
-.board-card-title {
-  font-size: 13px;
-  font-weight: bold;
-  color: #2c3e50;
-  margin-bottom: 6px;
-  line-height: 1.3;
-}
-
-.board-card-desc {
-  font-size: 12px;
-  color: #555555;
-  margin-bottom: 8px;
-}
-
-.board-card-meta {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 11px;
-  color: #666666;
-  border-top: 1px solid #f0f0f0;
-  padding-top: 6px;
-  margin-top: 6px;
-}
-
-.author-chip {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.author-dot {
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background-color: #6c757d;
-  color: #ffffff;
-  font-size: 9px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-}
-
-.author-dot.orange {
-  background-color: #fd7e14;
-}
-
-.author-dot.green {
-  background-color: #28a745;
-}
-
-.author-dot.blue {
-  background-color: #007bff;
-}
-
-.form-group {
-  margin-bottom: 15px;
-}
-
-.form-label {
-  display: block;
-  font-size: 13px;
-  font-weight: bold;
-  margin-bottom: 5px;
-  color: #333333;
-}
-
-.form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 15px;
-}
-
-.form-row-3 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 15px;
-}
-
-.editor-toolbar {
-  display: flex;
-  gap: 4px;
-  background-color: #f2f4f7;
-  padding: 6px 10px;
-  border: 1px solid #ced4da;
-  border-bottom: none;
-  border-radius: 4px 4px 0 0;
-}
-
-.editor-toolbar button {
-  padding: 4px 8px;
-  background-color: #ffffff;
-  border: 1px solid #ced4da;
-  border-radius: 3px;
-  cursor: pointer;
-  font-size: 12px;
-  font-weight: bold;
-}
-
-.editor-toolbar button:hover {
-  background-color: #e2e6ea;
-}
-
-.editor-textarea {
-  width: 100%;
-  height: 220px;
-  padding: 12px;
-  border: 1px solid #ced4da;
-  border-radius: 0 0 4px 4px;
-  font-size: 13px;
-  line-height: 1.6;
-  font-family: Arial, Helvetica, sans-serif;
-  resize: vertical;
-}
-
-.preview-box {
-  background-color: #ffffff;
-  border: 1px solid #dcdcdc;
-  border-radius: 4px;
-  padding: 18px;
-  margin-top: 15px;
-}
-
-.preview-title {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 8px;
-  color: #111111;
-}
-
-.preview-meta {
-  font-size: 12px;
-  color: #666666;
-  margin-bottom: 12px;
-  padding-bottom: 6px;
-  border-bottom: 1px solid #e0e0e0;
-}
-
-.preview-body {
-  font-size: 13px;
-  line-height: 1.6;
-  color: #333333;
-}
-
-.preview-body p {
-  margin-bottom: 10px;
-}
-
-.preview-body h3 {
-  font-size: 15px;
-  margin: 12px 0 6px;
-  color: #2c3e50;
-}
-
-.preview-body blockquote {
-  border-left: 3px solid #007bff;
-  padding-left: 10px;
-  color: #555555;
-  font-style: italic;
-  margin: 10px 0;
 }
 
 .pipeline-list {
@@ -678,9 +384,6 @@ tr:hover {
   .dashboard-row {
     grid-template-columns: 1fr;
   }
-  .board-columns {
-    grid-template-columns: 1fr 1fr;
-  }
 }
 
 @media (max-width: 700px) {
@@ -697,12 +400,6 @@ tr:hover {
     padding: 15px;
   }
   .stats-grid {
-    grid-template-columns: 1fr;
-  }
-  .board-columns {
-    grid-template-columns: 1fr;
-  }
-  .form-row, .form-row-3 {
     grid-template-columns: 1fr;
   }
 }
@@ -727,7 +424,7 @@ tr:hover {
     <div class="sidebar-user">
       <div class="user-avatar">D</div>
       <div>
-        <div class="user-name">Dev</div>
+        <div class="user-name">Devansh</div>
         <div class="user-role">Editor</div>
       </div>
     </div>
@@ -737,10 +434,10 @@ tr:hover {
     <div class="page-header">
       <div>
         <h1 class="page-title">Editorial Dashboard</h1>
-        <p class="page-subtitle">Welcome back, Devansh. Here is the current article summary.</p>
+        <p class="page-subtitle">Welcome back, Devansh. Mini Project overview.</p>
       </div>
       <div style="display: flex; gap: 8px;">
-        <a href="board.html" class="btn btn-secondary">Editorial Board</a>
+        <a href="board.html" class="btn btn-secondary">Board</a>
         <a href="editor.html" class="btn btn-primary">+ New Article</a>
       </div>
     </div>
@@ -748,23 +445,18 @@ tr:hover {
     <div class="stats-grid">
       <div class="stat-card">
         <div class="stat-title">Total Articles</div>
-        <div class="stat-value">18</div>
-        <div class="stat-desc">Created this semester</div>
+        <div class="stat-value">3</div>
+        <div class="stat-desc">Semester project</div>
       </div>
       <div class="stat-card orange">
-        <div class="stat-title">Under Review</div>
-        <div class="stat-value">4</div>
-        <div class="stat-desc">Pending approval</div>
-      </div>
-      <div class="stat-card blue">
-        <div class="stat-title">Scheduled</div>
-        <div class="stat-value">3</div>
-        <div class="stat-desc">Ready for release</div>
+        <div class="stat-title">In Review</div>
+        <div class="stat-value">1</div>
+        <div class="stat-desc">Pending review</div>
       </div>
       <div class="stat-card green">
         <div class="stat-title">Published</div>
-        <div class="stat-value">11</div>
-        <div class="stat-desc">Live on portal</div>
+        <div class="stat-value">2</div>
+        <div class="stat-desc">Live stories</div>
       </div>
     </div>
 
@@ -781,38 +473,21 @@ tr:hover {
                 <tr>
                   <th>Title</th>
                   <th>Author</th>
-                  <th>Category</th>
                   <th>Status</th>
                   <th>Action</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td><strong>Web Development Trends in 2026</strong></td>
+                  <td><strong>HTML5 & CSS3 Project Guide</strong></td>
                   <td>Devansh</td>
-                  <td>Technology</td>
                   <td><span class="badge badge-review">In Review</span></td>
                   <td><a href="editor.html" class="btn btn-sm btn-primary">Edit</a></td>
                 </tr>
                 <tr>
-                  <td><strong>Database Normalization Guide</strong></td>
+                  <td><strong>Database Management Systems</strong></td>
                   <td>Ayush</td>
-                  <td>Database</td>
                   <td><span class="badge badge-published">Published</span></td>
-                  <td><a href="editor.html" class="btn btn-sm">View</a></td>
-                </tr>
-                <tr>
-                  <td><strong>Computer Networks Fundamentals</strong></td>
-                  <td>Ashutosh</td>
-                  <td>Networking</td>
-                  <td><span class="badge badge-draft">Draft</span></td>
-                  <td><a href="editor.html" class="btn btn-sm btn-primary">Edit</a></td>
-                </tr>
-                <tr>
-                  <td><strong>Operating Systems Core Concepts</strong></td>
-                  <td>Devansh</td>
-                  <td>CS Core</td>
-                  <td><span class="badge badge-scheduled">Scheduled</span></td>
                   <td><a href="editor.html" class="btn btn-sm">View</a></td>
                 </tr>
               </tbody>
@@ -828,36 +503,32 @@ tr:hover {
           </div>
           <div class="pipeline-list">
             <div class="pipeline-item">
-              <span class="pipeline-name">Draft Articles</span>
-              <span class="pipeline-count">4</span>
+              <span class="pipeline-name">Draft</span>
+              <span class="pipeline-count">1</span>
             </div>
             <div class="pipeline-item">
               <span class="pipeline-name">In Review</span>
-              <span class="pipeline-count">4</span>
-            </div>
-            <div class="pipeline-item">
-              <span class="pipeline-name">Scheduled</span>
-              <span class="pipeline-count">3</span>
+              <span class="pipeline-count">1</span>
             </div>
             <div class="pipeline-item">
               <span class="pipeline-name">Published</span>
-              <span class="pipeline-count">7</span>
+              <span class="pipeline-count">2</span>
             </div>
           </div>
         </div>
 
         <div class="card">
           <div class="card-title">
-            <span>Project Notes</span>
+            <span>Project Details</span>
           </div>
           <ul class="notice-list">
             <li class="notice-item">
-              <div><strong>Project Submission</strong></div>
-              <div class="notice-date">Due Friday at 5:00 PM</div>
+              <div><strong>Project Presentation</strong></div>
+              <div class="notice-date">Editorial Workflow Studio</div>
             </li>
             <li class="notice-item">
-              <div><strong>Review Pending</strong></div>
-              <div class="notice-date">Check Ayush and Ashutosh's drafts</div>
+              <div><strong>Team Members</strong></div>
+              <div class="notice-date">Devansh & Ayush</div>
             </li>
           </ul>
         </div>

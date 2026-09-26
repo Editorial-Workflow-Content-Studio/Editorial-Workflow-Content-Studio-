@@ -173,143 +173,6 @@ button, input, select, textarea {
   margin-top: 2px;
 }
 
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
-  margin-bottom: 20px;
-}
-
-.stat-card {
-  background-color: #ffffff;
-  border: 1px solid #dcdcdc;
-  border-radius: 4px;
-  padding: 15px;
-  border-left: 4px solid #007bff;
-}
-
-.stat-card.orange {
-  border-left-color: #fd7e14;
-}
-
-.stat-card.blue {
-  border-left-color: #17a2b8;
-}
-
-.stat-card.green {
-  border-left-color: #28a745;
-}
-
-.stat-title {
-  font-size: 11px;
-  color: #666666;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
-.stat-value {
-  font-size: 24px;
-  font-weight: bold;
-  color: #2c3e50;
-  margin: 4px 0;
-}
-
-.stat-desc {
-  font-size: 11px;
-  color: #888888;
-}
-
-.dashboard-row {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 20px;
-}
-
-.card {
-  background-color: #ffffff;
-  border: 1px solid #dcdcdc;
-  border-radius: 4px;
-  padding: 18px;
-  margin-bottom: 20px;
-}
-
-.card-title {
-  font-size: 14px;
-  font-weight: bold;
-  color: #2c3e50;
-  margin-bottom: 12px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid #eeeeee;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.table-responsive {
-  overflow-x: auto;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: left;
-}
-
-th, td {
-  padding: 9px 12px;
-  border: 1px solid #e0e0e0;
-  font-size: 13px;
-}
-
-th {
-  background-color: #f2f4f7;
-  color: #495057;
-  font-weight: bold;
-}
-
-tr:nth-child(even) {
-  background-color: #fbfbfb;
-}
-
-tr:hover {
-  background-color: #f1f4f8;
-}
-
-.badge {
-  display: inline-block;
-  padding: 3px 7px;
-  font-size: 11px;
-  font-weight: bold;
-  border-radius: 3px;
-  text-transform: uppercase;
-}
-
-.badge-draft {
-  background-color: #e9ecef;
-  color: #495057;
-}
-
-.badge-review {
-  background-color: #fff3cd;
-  color: #856404;
-}
-
-.badge-scheduled {
-  background-color: #d1ecf1;
-  color: #0c5460;
-}
-
-.badge-published {
-  background-color: #d4edda;
-  color: #155724;
-}
-
-.badge-tag {
-  background-color: #e9ecef;
-  color: #495057;
-  font-size: 10px;
-}
-
 .btn {
   display: inline-block;
   padding: 6px 12px;
@@ -337,95 +200,14 @@ tr:hover {
   background-color: #0069d9;
 }
 
-.btn-success {
-  background-color: #28a745;
-  color: #ffffff;
-  border-color: #28a745;
-}
-
-.btn-success:hover {
-  background-color: #218838;
-}
-
-.btn-secondary {
-  background-color: #6c757d;
-  color: #ffffff;
-  border-color: #6c757d;
-}
-
-.btn-secondary:hover {
-  background-color: #5a6268;
-}
-
-.btn-danger {
-  background-color: #dc3545;
-  color: #ffffff;
-  border-color: #dc3545;
-}
-
-.btn-danger:hover {
-  background-color: #c82333;
-}
-
 .btn-sm {
-  padding: 3px 8px;
+  padding: 2px 7px;
   font-size: 11px;
-}
-
-.filter-bar {
-  background-color: #ffffff;
-  border: 1px solid #dcdcdc;
-  border-radius: 4px;
-  padding: 10px 15px;
-  margin-bottom: 18px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.filter-group {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.form-control {
-  padding: 6px 10px;
-  font-size: 13px;
-  border: 1px solid #ced4da;
-  border-radius: 3px;
-  background-color: #ffffff;
-  font-family: inherit;
-}
-
-.form-control:focus {
-  border-color: #007bff;
-  outline: none;
-}
-
-.pagination {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 15px;
-  font-size: 12px;
-  color: #666666;
-}
-
-.page-link {
-  padding: 4px 8px;
-  border: 1px solid #007bff;
-  border-radius: 3px;
-  background-color: #007bff;
-  color: #ffffff;
 }
 
 .board-columns {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 15px;
   align-items: flex-start;
 }
@@ -515,171 +297,23 @@ tr:hover {
   background-color: #28a745;
 }
 
-.author-dot.blue {
-  background-color: #007bff;
-}
-
-.form-group {
-  margin-bottom: 15px;
-}
-
-.form-label {
-  display: block;
-  font-size: 13px;
+.badge {
+  display: inline-block;
+  padding: 2px 6px;
+  font-size: 10px;
   font-weight: bold;
-  margin-bottom: 5px;
-  color: #333333;
-}
-
-.form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 15px;
-}
-
-.form-row-3 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 15px;
-}
-
-.editor-toolbar {
-  display: flex;
-  gap: 4px;
-  background-color: #f2f4f7;
-  padding: 6px 10px;
-  border: 1px solid #ced4da;
-  border-bottom: none;
-  border-radius: 4px 4px 0 0;
-}
-
-.editor-toolbar button {
-  padding: 4px 8px;
-  background-color: #ffffff;
-  border: 1px solid #ced4da;
   border-radius: 3px;
-  cursor: pointer;
-  font-size: 12px;
-  font-weight: bold;
+  text-transform: uppercase;
 }
 
-.editor-toolbar button:hover {
-  background-color: #e2e6ea;
-}
-
-.editor-textarea {
-  width: 100%;
-  height: 220px;
-  padding: 12px;
-  border: 1px solid #ced4da;
-  border-radius: 0 0 4px 4px;
-  font-size: 13px;
-  line-height: 1.6;
-  font-family: Arial, Helvetica, sans-serif;
-  resize: vertical;
-}
-
-.preview-box {
-  background-color: #ffffff;
-  border: 1px solid #dcdcdc;
-  border-radius: 4px;
-  padding: 18px;
-  margin-top: 15px;
-}
-
-.preview-title {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 8px;
-  color: #111111;
-}
-
-.preview-meta {
-  font-size: 12px;
-  color: #666666;
-  margin-bottom: 12px;
-  padding-bottom: 6px;
-  border-bottom: 1px solid #e0e0e0;
-}
-
-.preview-body {
-  font-size: 13px;
-  line-height: 1.6;
-  color: #333333;
-}
-
-.preview-body p {
-  margin-bottom: 10px;
-}
-
-.preview-body h3 {
-  font-size: 15px;
-  margin: 12px 0 6px;
-  color: #2c3e50;
-}
-
-.preview-body blockquote {
-  border-left: 3px solid #007bff;
-  padding-left: 10px;
-  color: #555555;
-  font-style: italic;
-  margin: 10px 0;
-}
-
-.pipeline-list {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.pipeline-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px 10px;
-  background-color: #f8f9fa;
-  border: 1px solid #e9ecef;
-  border-radius: 3px;
-}
-
-.pipeline-name {
-  font-weight: bold;
-  font-size: 12px;
-}
-
-.pipeline-count {
-  font-weight: bold;
-  color: #007bff;
-}
-
-.notice-list {
-  list-style: none;
-}
-
-.notice-item {
-  padding: 8px 0;
-  border-bottom: 1px solid #eeeeee;
-  font-size: 12px;
-}
-
-.notice-item:last-child {
-  border-bottom: none;
-}
-
-.notice-date {
-  font-size: 11px;
-  color: #888888;
+.badge-tag {
+  background-color: #e9ecef;
+  color: #495057;
 }
 
 @media (max-width: 900px) {
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .dashboard-row {
-    grid-template-columns: 1fr;
-  }
   .board-columns {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 }
 
@@ -695,15 +329,6 @@ tr:hover {
   .main-content {
     margin-left: 0;
     padding: 15px;
-  }
-  .stats-grid {
-    grid-template-columns: 1fr;
-  }
-  .board-columns {
-    grid-template-columns: 1fr;
-  }
-  .form-row, .form-row-3 {
-    grid-template-columns: 1fr;
   }
 }
   </style>
@@ -736,25 +361,11 @@ tr:hover {
   <div class="main-content">
     <div class="page-header">
       <div>
-        <h1 class="page-title">Editorial Workflow Board</h1>
-        <p class="page-subtitle">Track status of articles across review and publishing pipeline.</p>
+        <h1 class="page-title">Editorial Board</h1>
+        <p class="page-subtitle">Workflow stages of project articles.</p>
       </div>
       <div>
-        <a href="editor.html" class="btn btn-primary">+ Add New Story</a>
-      </div>
-    </div>
-
-    <div class="filter-bar">
-      <div>
-        <select class="form-control">
-          <option>All Authors</option>
-          <option>Devansh</option>
-          <option>Ayush</option>
-          <option>Ashutosh</option>
-        </select>
-      </div>
-      <div style="font-size: 12px; color: #666;">
-        Total: <strong>7</strong> active cards
+        <a href="editor.html" class="btn btn-primary">+ Add Story</a>
       </div>
     </div>
 
@@ -762,30 +373,17 @@ tr:hover {
       <div class="board-column">
         <div class="col-header">
           <span>Drafts</span>
-          <span class="col-count">2</span>
+          <span class="col-count">1</span>
         </div>
 
         <div class="board-card">
-          <div class="board-card-title">Computer Networks Fundamentals</div>
-          <div class="board-card-desc">OSI reference model layers, TCP vs UDP protocols explained.</div>
+          <div class="board-card-title">Computer Networks Notes</div>
+          <div class="board-card-desc">OSI layer models and TCP protocol basics.</div>
           <span class="badge badge-tag">Networking</span>
           <div class="board-card-meta">
             <div class="author-chip">
-              <span class="author-dot blue">A</span>
-              <span>Ashutosh</span>
-            </div>
-            <a href="editor.html" class="btn btn-sm">Edit</a>
-          </div>
-        </div>
-
-        <div class="board-card">
-          <div class="board-card-title">Data Structures and Algorithms Basics</div>
-          <div class="board-card-desc">Arrays, linked lists, stacks and queues with practical examples.</div>
-          <span class="badge badge-tag">CS Core</span>
-          <div class="board-card-meta">
-            <div class="author-chip">
-              <span class="author-dot blue">A</span>
-              <span>Ashutosh</span>
+              <span class="author-dot orange">D</span>
+              <span>Devansh</span>
             </div>
             <a href="editor.html" class="btn btn-sm">Edit</a>
           </div>
@@ -795,52 +393,19 @@ tr:hover {
       <div class="board-column">
         <div class="col-header">
           <span>In Review</span>
-          <span class="col-count">2</span>
-        </div>
-
-        <div class="board-card">
-          <div class="board-card-title">Web Development Trends in 2026</div>
-          <div class="board-card-desc">Overview of modern web standards, HTML5 semantic layout practices.</div>
-          <span class="badge badge-tag">Technology</span>
-          <div class="board-card-meta">
-            <div class="author-chip">
-              <span class="author-dot orange">D</span>
-              <span>Devansh</span>
-            </div>
-            <a href="editor.html" class="btn btn-sm btn-primary">Review</a>
-          </div>
-        </div>
-
-        <div class="board-card">
-          <div class="board-card-title">Compiler Design Introduction</div>
-          <div class="board-card-desc">Lexical analysis, syntax trees, and code generation phases.</div>
-          <span class="badge badge-tag">CS Core</span>
-          <div class="board-card-meta">
-            <div class="author-chip">
-              <span class="author-dot orange">D</span>
-              <span>Devansh</span>
-            </div>
-            <a href="editor.html" class="btn btn-sm btn-primary">Review</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="board-column">
-        <div class="col-header">
-          <span>Scheduled</span>
           <span class="col-count">1</span>
         </div>
 
         <div class="board-card">
-          <div class="board-card-title">Operating Systems Core Concepts</div>
-          <div class="board-card-desc">Process management, memory paging, and CPU scheduling algorithms.</div>
-          <span class="badge badge-tag">CS Core</span>
+          <div class="board-card-title">HTML5 & CSS3 Project Guide</div>
+          <div class="board-card-desc">Semantic structure and responsive web design.</div>
+          <span class="badge badge-tag">Web Dev</span>
           <div class="board-card-meta">
             <div class="author-chip">
               <span class="author-dot orange">D</span>
               <span>Devansh</span>
             </div>
-            <span style="font-size: 10px; color: #007bff; font-weight: bold;">Oct 2, 10 AM</span>
+            <a href="editor.html" class="btn btn-sm btn-primary">Review</a>
           </div>
         </div>
       </div>
@@ -848,26 +413,13 @@ tr:hover {
       <div class="board-column">
         <div class="col-header">
           <span>Published</span>
-          <span class="col-count">2</span>
+          <span class="col-count">1</span>
         </div>
 
         <div class="board-card">
-          <div class="board-card-title">Database Normalization Guide</div>
-          <div class="board-card-desc">1NF, 2NF, 3NF and BCNF relational database design with examples.</div>
+          <div class="board-card-title">Database Management Systems</div>
+          <div class="board-card-desc">Relational schema design and SQL indexing.</div>
           <span class="badge badge-tag">Database</span>
-          <div class="board-card-meta">
-            <div class="author-chip">
-              <span class="author-dot green">A</span>
-              <span>Ayush</span>
-            </div>
-            <span style="font-size: 10px; color: #28a745; font-weight: bold;">Live</span>
-          </div>
-        </div>
-
-        <div class="board-card">
-          <div class="board-card-title">Object Oriented Programming with Java</div>
-          <div class="board-card-desc">Inheritance, polymorphism, abstraction, and encapsulation core pillars.</div>
-          <span class="badge badge-tag">Programming</span>
           <div class="board-card-meta">
             <div class="author-chip">
               <span class="author-dot green">A</span>

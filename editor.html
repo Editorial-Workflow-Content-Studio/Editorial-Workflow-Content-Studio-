@@ -173,58 +173,6 @@ button, input, select, textarea {
   margin-top: 2px;
 }
 
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
-  margin-bottom: 20px;
-}
-
-.stat-card {
-  background-color: #ffffff;
-  border: 1px solid #dcdcdc;
-  border-radius: 4px;
-  padding: 15px;
-  border-left: 4px solid #007bff;
-}
-
-.stat-card.orange {
-  border-left-color: #fd7e14;
-}
-
-.stat-card.blue {
-  border-left-color: #17a2b8;
-}
-
-.stat-card.green {
-  border-left-color: #28a745;
-}
-
-.stat-title {
-  font-size: 11px;
-  color: #666666;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
-.stat-value {
-  font-size: 24px;
-  font-weight: bold;
-  color: #2c3e50;
-  margin: 4px 0;
-}
-
-.stat-desc {
-  font-size: 11px;
-  color: #888888;
-}
-
-.dashboard-row {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 20px;
-}
-
 .card {
   background-color: #ffffff;
   border: 1px solid #dcdcdc;
@@ -240,74 +188,51 @@ button, input, select, textarea {
   margin-bottom: 12px;
   padding-bottom: 8px;
   border-bottom: 1px solid #eeeeee;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
-.table-responsive {
-  overflow-x: auto;
+.form-group {
+  margin-bottom: 15px;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: left;
-}
-
-th, td {
-  padding: 9px 12px;
-  border: 1px solid #e0e0e0;
+.form-label {
+  display: block;
   font-size: 13px;
-}
-
-th {
-  background-color: #f2f4f7;
-  color: #495057;
   font-weight: bold;
+  margin-bottom: 5px;
+  color: #333333;
 }
 
-tr:nth-child(even) {
-  background-color: #fbfbfb;
-}
-
-tr:hover {
-  background-color: #f1f4f8;
-}
-
-.badge {
-  display: inline-block;
-  padding: 3px 7px;
-  font-size: 11px;
-  font-weight: bold;
+.form-control {
+  width: 100%;
+  padding: 7px 10px;
+  font-size: 13px;
+  border: 1px solid #ced4da;
   border-radius: 3px;
-  text-transform: uppercase;
+  background-color: #ffffff;
+  font-family: inherit;
 }
 
-.badge-draft {
-  background-color: #e9ecef;
-  color: #495057;
+.form-control:focus {
+  border-color: #007bff;
+  outline: none;
 }
 
-.badge-review {
-  background-color: #fff3cd;
-  color: #856404;
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
 }
 
-.badge-scheduled {
-  background-color: #d1ecf1;
-  color: #0c5460;
-}
-
-.badge-published {
-  background-color: #d4edda;
-  color: #155724;
-}
-
-.badge-tag {
-  background-color: #e9ecef;
-  color: #495057;
-  font-size: 10px;
+.editor-textarea {
+  width: 100%;
+  height: 120px;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 3px;
+  font-size: 13px;
+  line-height: 1.5;
+  font-family: Arial, Helvetica, sans-serif;
+  resize: vertical;
 }
 
 .btn {
@@ -357,332 +282,6 @@ tr:hover {
   background-color: #5a6268;
 }
 
-.btn-danger {
-  background-color: #dc3545;
-  color: #ffffff;
-  border-color: #dc3545;
-}
-
-.btn-danger:hover {
-  background-color: #c82333;
-}
-
-.btn-sm {
-  padding: 3px 8px;
-  font-size: 11px;
-}
-
-.filter-bar {
-  background-color: #ffffff;
-  border: 1px solid #dcdcdc;
-  border-radius: 4px;
-  padding: 10px 15px;
-  margin-bottom: 18px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.filter-group {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.form-control {
-  padding: 6px 10px;
-  font-size: 13px;
-  border: 1px solid #ced4da;
-  border-radius: 3px;
-  background-color: #ffffff;
-  font-family: inherit;
-}
-
-.form-control:focus {
-  border-color: #007bff;
-  outline: none;
-}
-
-.pagination {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 15px;
-  font-size: 12px;
-  color: #666666;
-}
-
-.page-link {
-  padding: 4px 8px;
-  border: 1px solid #007bff;
-  border-radius: 3px;
-  background-color: #007bff;
-  color: #ffffff;
-}
-
-.board-columns {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
-  align-items: flex-start;
-}
-
-.board-column {
-  background-color: #e9edf0;
-  border: 1px solid #ced4da;
-  border-radius: 4px;
-  padding: 12px;
-}
-
-.col-header {
-  font-size: 13px;
-  font-weight: bold;
-  color: #2c3e50;
-  margin-bottom: 12px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.col-count {
-  background-color: #ced4da;
-  color: #2c3e50;
-  padding: 2px 6px;
-  border-radius: 10px;
-  font-size: 11px;
-}
-
-.board-card {
-  background-color: #ffffff;
-  border: 1px solid #dcdcdc;
-  border-radius: 4px;
-  padding: 12px;
-  margin-bottom: 10px;
-}
-
-.board-card-title {
-  font-size: 13px;
-  font-weight: bold;
-  color: #2c3e50;
-  margin-bottom: 6px;
-  line-height: 1.3;
-}
-
-.board-card-desc {
-  font-size: 12px;
-  color: #555555;
-  margin-bottom: 8px;
-}
-
-.board-card-meta {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 11px;
-  color: #666666;
-  border-top: 1px solid #f0f0f0;
-  padding-top: 6px;
-  margin-top: 6px;
-}
-
-.author-chip {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.author-dot {
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background-color: #6c757d;
-  color: #ffffff;
-  font-size: 9px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-}
-
-.author-dot.orange {
-  background-color: #fd7e14;
-}
-
-.author-dot.green {
-  background-color: #28a745;
-}
-
-.author-dot.blue {
-  background-color: #007bff;
-}
-
-.form-group {
-  margin-bottom: 15px;
-}
-
-.form-label {
-  display: block;
-  font-size: 13px;
-  font-weight: bold;
-  margin-bottom: 5px;
-  color: #333333;
-}
-
-.form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 15px;
-}
-
-.form-row-3 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 15px;
-}
-
-.editor-toolbar {
-  display: flex;
-  gap: 4px;
-  background-color: #f2f4f7;
-  padding: 6px 10px;
-  border: 1px solid #ced4da;
-  border-bottom: none;
-  border-radius: 4px 4px 0 0;
-}
-
-.editor-toolbar button {
-  padding: 4px 8px;
-  background-color: #ffffff;
-  border: 1px solid #ced4da;
-  border-radius: 3px;
-  cursor: pointer;
-  font-size: 12px;
-  font-weight: bold;
-}
-
-.editor-toolbar button:hover {
-  background-color: #e2e6ea;
-}
-
-.editor-textarea {
-  width: 100%;
-  height: 220px;
-  padding: 12px;
-  border: 1px solid #ced4da;
-  border-radius: 0 0 4px 4px;
-  font-size: 13px;
-  line-height: 1.6;
-  font-family: Arial, Helvetica, sans-serif;
-  resize: vertical;
-}
-
-.preview-box {
-  background-color: #ffffff;
-  border: 1px solid #dcdcdc;
-  border-radius: 4px;
-  padding: 18px;
-  margin-top: 15px;
-}
-
-.preview-title {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 8px;
-  color: #111111;
-}
-
-.preview-meta {
-  font-size: 12px;
-  color: #666666;
-  margin-bottom: 12px;
-  padding-bottom: 6px;
-  border-bottom: 1px solid #e0e0e0;
-}
-
-.preview-body {
-  font-size: 13px;
-  line-height: 1.6;
-  color: #333333;
-}
-
-.preview-body p {
-  margin-bottom: 10px;
-}
-
-.preview-body h3 {
-  font-size: 15px;
-  margin: 12px 0 6px;
-  color: #2c3e50;
-}
-
-.preview-body blockquote {
-  border-left: 3px solid #007bff;
-  padding-left: 10px;
-  color: #555555;
-  font-style: italic;
-  margin: 10px 0;
-}
-
-.pipeline-list {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.pipeline-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px 10px;
-  background-color: #f8f9fa;
-  border: 1px solid #e9ecef;
-  border-radius: 3px;
-}
-
-.pipeline-name {
-  font-weight: bold;
-  font-size: 12px;
-}
-
-.pipeline-count {
-  font-weight: bold;
-  color: #007bff;
-}
-
-.notice-list {
-  list-style: none;
-}
-
-.notice-item {
-  padding: 8px 0;
-  border-bottom: 1px solid #eeeeee;
-  font-size: 12px;
-}
-
-.notice-item:last-child {
-  border-bottom: none;
-}
-
-.notice-date {
-  font-size: 11px;
-  color: #888888;
-}
-
-@media (max-width: 900px) {
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .dashboard-row {
-    grid-template-columns: 1fr;
-  }
-  .board-columns {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
 @media (max-width: 700px) {
   body {
     flex-direction: column;
@@ -696,13 +295,7 @@ tr:hover {
     margin-left: 0;
     padding: 15px;
   }
-  .stats-grid {
-    grid-template-columns: 1fr;
-  }
-  .board-columns {
-    grid-template-columns: 1fr;
-  }
-  .form-row, .form-row-3 {
+  .form-row {
     grid-template-columns: 1fr;
   }
 }
@@ -737,116 +330,55 @@ tr:hover {
     <div class="page-header">
       <div>
         <h1 class="page-title">Article Editor</h1>
-        <p class="page-subtitle">Write, edit, and submit articles to the workflow.</p>
+        <p class="page-subtitle">Submit or edit article details.</p>
       </div>
-      <div style="display: flex; gap: 8px;">
+      <div>
         <a href="content.html" class="btn btn-secondary">Back to List</a>
-        <button class="btn btn-primary">Save Draft</button>
-        <button class="btn btn-success">Submit for Review</button>
       </div>
     </div>
 
     <div class="card">
-      <div class="card-title">Article Details</div>
+      <div class="card-title">Article Form</div>
 
       <div class="form-row">
         <div class="form-group">
           <label class="form-label">Article Title</label>
-          <input type="text" class="form-control" value="Web Development Trends in 2026">
+          <input type="text" class="form-control" value="HTML5 & CSS3 Project Guide">
         </div>
         <div class="form-group">
-          <label class="form-label">Article URL Slug</label>
-          <input type="text" class="form-control" value="web-development-trends-in-2026">
+          <label class="form-label">Author Name</label>
+          <input type="text" class="form-control" value="Devansh" readonly>
         </div>
       </div>
 
-      <div class="form-row-3">
+      <div class="form-row">
         <div class="form-group">
           <label class="form-label">Category</label>
           <select class="form-control">
-            <option selected>Technology</option>
+            <option selected>Web Development</option>
             <option>Database</option>
-            <option>Networking</option>
-            <option>CS Core</option>
-            <option>Programming</option>
           </select>
         </div>
         <div class="form-group">
-          <label class="form-label">Author</label>
-          <select class="form-control">
-            <option selected>Devansh</option>
-            <option>Ayush</option>
-            <option>Ashutosh</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label class="form-label">Workflow Status</label>
+          <label class="form-label">Status</label>
           <select class="form-control">
             <option>Draft</option>
             <option selected>In Review</option>
-            <option>Scheduled</option>
             <option>Published</option>
           </select>
         </div>
       </div>
-    </div>
 
-    <div class="card">
-      <div class="card-title">Content Editor</div>
-
-      <div class="editor-toolbar">
-        <button type="button">B</button>
-        <button type="button"><em>I</em></button>
-        <button type="button"><u>U</u></button>
-        <button type="button">H1</button>
-        <button type="button">H2</button>
-        <button type="button">"Quote"</button>
-        <button type="button">&bull; List</button>
+      <div class="form-group">
+        <label class="form-label">Article Content</label>
+        <textarea class="editor-textarea">A responsive editorial workflow interface built using semantic HTML5 and CSS3 for college mini project.</textarea>
       </div>
 
-      <textarea class="editor-textarea"># Web Development Trends in 2026
-
-Web development has seen substantial growth in semantic HTML5 standards and modern CSS3 capabilities. Building responsive user interfaces without heavy external frameworks is a key focus for lightweight, accessible web applications.
-
-### Core Architecture Principles
-
-Clean code structure, semantic tags, and modular styling make codebases easier to maintain and understand for development teams.
-
-> Writing readable code is just as important as writing functional code.
-
-In this mini-project, we implemented pure HTML5 and CSS3 workflows to demonstrate core frontend engineering principles without third-party libraries.</textarea>
-
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 12px;">
-        <span style="font-size: 12px; color: #666;">Word count: <strong>78 words</strong></span>
-        <div style="display: flex; gap: 8px;">
-          <button class="btn btn-secondary">Clear</button>
-          <button class="btn btn-primary">Save Changes</button>
-        </div>
+      <div style="display: flex; gap: 8px;">
+        <button class="btn btn-primary">Save Draft</button>
+        <button class="btn btn-success">Submit for Review</button>
+        <a href="content.html" class="btn btn-secondary">Cancel</a>
       </div>
-    </div>
-
-    <div class="card">
-      <div class="card-title">Live Preview</div>
-
-      <div class="preview-box">
-        <h2 class="preview-title">Web Development Trends in 2026</h2>
-        <div class="preview-meta">
-          By <strong>Devansh</strong> | Category: <strong>Technology</strong> | Status: <strong style="color: #856404;">In Review</strong>
-        </div>
-        <div class="preview-body">
-          <p>Web development has seen substantial growth in semantic HTML5 standards and modern CSS3 capabilities. Building responsive user interfaces without heavy external frameworks is a key focus for lightweight, accessible web applications.</p>
-          <h3>Core Architecture Principles</h3>
-          <p>Clean code structure, semantic tags, and modular styling make codebases easier to maintain and understand for development teams.</p>
-          <blockquote>Writing readable code is just as important as writing functional code.</blockquote>
-          <p>In this mini-project, we implemented pure HTML5 and CSS3 workflows to demonstrate core frontend engineering principles without third-party libraries.</p>
-        </div>
-      </div>
-    </div>
-
-    <div style="display: flex; justify-content: flex-end; gap: 10px; margin-bottom: 30px;">
-      <a href="content.html" class="btn btn-secondary">Cancel</a>
-      <button class="btn btn-primary">Save Draft</button>
-      <button class="btn btn-success">Publish Article</button>
     </div>
   </div>
 
