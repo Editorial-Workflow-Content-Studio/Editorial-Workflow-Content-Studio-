@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Editorial Studio</title>
+  <style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f6f9;
+  color: #333333;
+  line-height: 1.5;
+  font-size: 13px;
+  display: flex;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input, select, textarea {
+  font: inherit;
+  color: inherit;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #2c3e50;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+}
+
+.sidebar-header {
+  padding: 18px 16px;
+  border-bottom: 1px solid #34495e;
+}
+
+.brand-title {
+  font-size: 15px;
+  font-weight: bold;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+.brand-sub {
+  font-size: 11px;
+  color: #bdc3c7;
+  margin-top: 3px;
+}
+
+.sidebar-menu {
+  flex: 1;
+  padding: 15px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.menu-label {
+  font-size: 10px;
+  font-weight: bold;
+  color: #95a5a6;
+  text-transform: uppercase;
+  padding: 8px 10px 4px;
+}
+
+.nav-link {
+  display: block;
+  padding: 9px 12px;
+  color: #ecf0f1;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  background-color: #34495e;
+  color: #ffffff;
+}
+
+.nav-link.active {
+  background-color: #007bff;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.nav-link.btn-create {
+  background-color: #28a745;
+  color: #ffffff;
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.nav-link.btn-create:hover {
+  background-color: #218838;
+}
+
+.sidebar-user {
+  padding: 12px 16px;
+  border-top: 1px solid #34495e;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #243342;
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #e67e22;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.user-name {
+  font-size: 13px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.user-role {
+  font-size: 11px;
+  color: #bdc3c7;
+}
+
+.main-content {
+  margin-left: 220px;
+  flex: 1;
+  padding: 22px 25px;
+  min-width: 0;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 15px 20px;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.page-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.page-subtitle {
+  font-size: 12px;
+  color: #666666;
+  margin-top: 2px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.stat-card {
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  padding: 15px;
+  border-left: 4px solid #007bff;
+}
+
+.stat-card.orange {
+  border-left-color: #fd7e14;
+}
+
+.stat-card.green {
+  border-left-color: #28a745;
+}
+
+.stat-title {
+  font-size: 11px;
+  color: #666666;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin: 4px 0;
+}
+
+.stat-desc {
+  font-size: 11px;
+  color: #888888;
+}
+
+.dashboard-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  padding: 18px;
+  margin-bottom: 20px;
+}
+
+.card-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #eeeeee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  padding: 9px 12px;
+  border: 1px solid #e0e0e0;
+  font-size: 13px;
+}
+
+th {
+  background-color: #f2f4f7;
+  color: #495057;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #fbfbfb;
+}
+
+tr:hover {
+  background-color: #f1f4f8;
+}
+
+.badge {
+  display: inline-block;
+  padding: 3px 7px;
+  font-size: 11px;
+  font-weight: bold;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+.badge-review {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.badge-published {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 13px;
+  border-radius: 3px;
+  text-align: center;
+  border: 1px solid #ccc;
+  background-color: #ffffff;
+  color: #333333;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #e9ecef;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #ffffff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0069d9;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: #ffffff;
+  border-color: #6c757d;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+.btn-sm {
+  padding: 3px 8px;
+  font-size: 11px;
+}
+
+.pipeline-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pipeline-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 3px;
+}
+
+.pipeline-name {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.pipeline-count {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.notice-list {
+  list-style: none;
+}
+
+.notice-item {
+  padding: 8px 0;
+  border-bottom: 1px solid #eeeeee;
+  font-size: 12px;
+}
+
+.notice-item:last-child {
+  border-bottom: none;
+}
+
+.notice-date {
+  font-size: 11px;
+  color: #888888;
+}
+
+@media (max-width: 900px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .dashboard-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  body {
+    flex-direction: column;
+  }
+  .sidebar {
+    position: static;
+    width: 100%;
+    min-height: auto;
+  }
+  .main-content {
+    margin-left: 0;
+    padding: 15px;
+  }
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <div class="brand-title">EDITORIAL STUDIO</div>
+      <div class="brand-sub">Mini Project</div>
+    </div>
+
+    <div class="sidebar-menu">
+      <div class="menu-label">Navigation</div>
+      <a href="index.html" class="nav-link">Home (Landing)</a>
+      <a href="dashboard.html" class="nav-link active">Dashboard</a>
+      <a href="content.html" class="nav-link">All Articles</a>
+      <a href="board.html" class="nav-link">Editorial Board</a>
+      <a href="editor.html" class="nav-link btn-create">+ Write Article</a>
+    </div>
+
+    <div class="sidebar-user">
+      <div class="user-avatar">D</div>
+      <div>
+        <div class="user-name">Devansh</div>
+        <div class="user-role">Editor</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <div class="page-header">
+      <div>
+        <h1 class="page-title">Editorial Dashboard</h1>
+        <p class="page-subtitle">Welcome back, Devansh. Mini Project overview.</p>
+      </div>
+      <div style="display: flex; gap: 8px;">
+        <a href="index.html" class="btn btn-secondary">Landing Page</a>
+        <a href="board.html" class="btn btn-secondary">Board</a>
+        <a href="editor.html" class="btn btn-primary">+ New Article</a>
+      </div>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-title">Total Articles</div>
+        <div class="stat-value">3</div>
+        <div class="stat-desc">Semester project</div>
+      </div>
+      <div class="stat-card orange">
+        <div class="stat-title">In Review</div>
+        <div class="stat-value">1</div>
+        <div class="stat-desc">Pending review</div>
+      </div>
+      <div class="stat-card green">
+        <div class="stat-title">Published</div>
+        <div class="stat-value">2</div>
+        <div class="stat-desc">Live stories</div>
+      </div>
+    </div>
+
+    <div class="dashboard-row">
+      <div>
+        <div class="card">
+          <div class="card-title">
+            <span>Recent Articles</span>
+            <a href="content.html" class="btn btn-sm">View All</a>
+          </div>
+          <div class="table-responsive">
+            <table>
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Author</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>HTML5 & CSS3 Project Guide</strong></td>
+                  <td>Devansh</td>
+                  <td><span class="badge badge-review">In Review</span></td>
+                  <td><a href="editor.html" class="btn btn-sm btn-primary">Edit</a></td>
+                </tr>
+                <tr>
+                  <td><strong>Database Management Systems</strong></td>
+                  <td>Ayush</td>
+                  <td><span class="badge badge-published">Published</span></td>
+                  <td><a href="editor.html" class="btn btn-sm">View</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="card">
+          <div class="card-title">
+            <span>Workflow Stages</span>
+          </div>
+          <div class="pipeline-list">
+            <div class="pipeline-item">
+              <span class="pipeline-name">Draft</span>
+              <span class="pipeline-count">1</span>
+            </div>
+            <div class="pipeline-item">
+              <span class="pipeline-name">In Review</span>
+              <span class="pipeline-count">1</span>
+            </div>
+            <div class="pipeline-item">
+              <span class="pipeline-name">Published</span>
+              <span class="pipeline-count">2</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">
+            <span>Project Details</span>
+          </div>
+          <ul class="notice-list">
+            <li class="notice-item">
+              <div><strong>Project Presentation</strong></div>
+              <div class="notice-date">Editorial Workflow Studio</div>
+            </li>
+            <li class="notice-item">
+              <div><strong>Team Members</strong></div>
+              <div class="notice-date">Devansh & Ayush</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
