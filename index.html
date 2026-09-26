@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <style>
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   background-color: #000000;
   color: #ffffff;
 }
@@ -17,49 +17,58 @@ body {
   background-color: #ffffff;
   color: #000000;
   text-align: center;
-  padding: 8px 15px;
-  font-size: 12px;
+  padding: 8px 16px;
+  font-size: 13px;
   font-weight: 500;
 }
 
 .btn-orange {
   background-color: #f04023;
   color: #ffffff;
-  border-color: #f04023;
+  border: 1px solid #f04023;
 }
 
 .btn-orange:hover {
   background-color: #d63318;
   color: #ffffff;
+  border-color: #d63318;
 }
 
 .hero-title {
-  font-size: 54px;
-  font-weight: bold;
+  font-size: 56px;
+  font-weight: 800;
   line-height: 1.1;
-  letter-spacing: -1px;
+  letter-spacing: -1.5px;
 }
 
 .studio-window {
   background-color: #ffffff;
-  color: #333333;
-  border-radius: 8px;
+  color: #222222;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9);
   border: 1px solid #222222;
 }
 
 .window-topbar {
-  background-color: #fcf6e8;
-  padding: 12px 18px;
-  border-bottom: 1px solid #eae2cf;
-  font-size: 12px;
+  background-color: #f8f6f0;
+  padding: 12px 20px;
+  border-bottom: 1px solid #e5dfd3;
+  font-size: 13px;
   color: #444444;
+}
+
+.window-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  display: inline-block;
 }
 
 @media (max-width: 768px) {
   .hero-title {
     font-size: 34px;
+    letter-spacing: -0.5px;
   }
 }
   </style>
@@ -67,124 +76,174 @@ body {
 <body>
 
   <div class="top-announcement">
-    Editorial Workflow &bull; [Mini Project] 2026: Built with Bootstrap 5, HTML5 &amp; CSS3.
-    <a href="dashboard.html" class="text-dark fw-bold ms-2">Explore Live Studio &rarr;</a>
+    <span>Editorial Workflow &bull; College Mini Project 2026 &bull; Powered by Bootstrap 5.3</span>
+    <a href="dashboard.html" class="text-dark fw-bold ms-2 text-decoration-none">Launch Studio &rarr;</a>
   </div>
 
   <nav class="navbar navbar-expand-lg border-bottom border-secondary bg-black py-3 px-4">
     <div class="container-fluid">
       <a class="navbar-brand text-white fw-bold d-flex align-items-center gap-2" href="index.html">
-        <i class="bi bi-layers-half text-danger fs-5"></i> EDITORIAL STUDIO
+        <i class="bi bi-layers-half text-danger fs-4"></i>
+        <span>EDITORIAL STUDIO</span>
       </a>
       <div class="d-flex align-items-center gap-3">
         <a href="dashboard.html" class="nav-link text-secondary d-none d-md-block"><i class="bi bi-speedometer2 me-1"></i>Dashboard</a>
         <a href="board.html" class="nav-link text-secondary d-none d-md-block"><i class="bi bi-kanban me-1"></i>Workflow Board</a>
         <a href="editor.html" class="nav-link text-secondary d-none d-md-block"><i class="bi bi-pencil-square me-1"></i>Write Article</a>
-        <a href="dashboard.html" class="btn btn-orange btn-sm rounded-pill px-3 fw-bold">Launch Studio</a>
+        <a href="dashboard.html" class="btn btn-orange btn-sm rounded-pill px-3 fw-bold">Open Studio</a>
       </div>
     </div>
   </nav>
 
-  <div class="container my-5 py-4">
-    <div class="text-secondary small fw-bold text-uppercase mb-3" style="letter-spacing: 1px;">EDITORIAL STUDIO FOR CONTENT TEAMS</div>
-    <h1 class="hero-title text-white mb-3">Content workflows that<br>adapt to how you work</h1>
-    <p class="text-secondary fs-5 mb-4" style="max-width: 720px;">
-      Experience creative freedom with infinitely-customizable editorial workflows.
-      From drafting, peer review, to orchestrated content releases. Built with Bootstrap 5 by Devansh &amp; Ayush.
+  <div class="container my-5 py-3">
+    <div class="mb-3">
+      <span class="badge rounded-pill bg-dark border border-secondary text-secondary px-3 py-2 text-uppercase" style="letter-spacing: 0.5px;">
+        <i class="bi bi-stars text-danger me-1"></i> Editorial Platform for Academic &amp; Tech Teams
+      </span>
+    </div>
+
+    <h1 class="hero-title text-white mb-3">
+      Content workflows that<br>adapt to how you work
+    </h1>
+
+    <p class="text-secondary fs-5 mb-4" style="max-width: 760px;">
+      Experience creative freedom with customizable editorial workflows.
+      From initial drafting and peer review to orchestrated content releases. Built with Bootstrap 5.3 by Devansh &amp; Ayush.
     </p>
-    <div class="d-flex gap-3 mb-5">
-      <a href="dashboard.html" class="btn btn-light rounded-pill px-4 py-2 fw-bold text-dark">Explore Studio</a>
-      <a href="board.html" class="btn btn-outline-secondary rounded-pill px-4 py-2 fw-bold text-white">View Workflow Board</a>
+
+    <div class="d-flex flex-wrap gap-3 mb-5">
+      <a href="dashboard.html" class="btn btn-light rounded-pill px-4 py-2 fw-bold text-dark">
+        <i class="bi bi-speedometer2 me-1"></i> Open Studio Dashboard
+      </a>
+      <a href="board.html" class="btn btn-outline-secondary rounded-pill px-4 py-2 fw-bold text-white">
+        <i class="bi bi-kanban me-1"></i> View Kanban Board
+      </a>
     </div>
 
     <div class="studio-window mb-5">
-      <div class="window-topbar d-flex justify-content-between align-items-center">
-        <div class="d-flex gap-3 align-items-center">
-          <strong class="text-danger">&bull; Editorial Studio</strong>
-          <span>Structure</span>
-          <span>Articles</span>
-          <span>Workflow</span>
+      <div class="window-topbar d-flex justify-content-between align-items-center flex-wrap gap-2">
+        <div class="d-flex align-items-center gap-2">
+          <span class="window-dot" style="background-color: #ff5f56;"></span>
+          <span class="window-dot" style="background-color: #ffbd2e;"></span>
+          <span class="window-dot" style="background-color: #27c93f;"></span>
+          <span class="ms-2 fw-bold text-dark"><i class="bi bi-terminal me-1 text-danger"></i>Editorial Studio &bull; Live Preview</span>
         </div>
-        <div>
-          <span>Editor: <strong>Devansh</strong></span>
+        <div class="d-flex align-items-center gap-2">
+          <span class="badge bg-secondary-subtle text-dark border">Lead: Devansh</span>
+          <span class="badge bg-secondary-subtle text-dark border">Reviewer: Ayush</span>
         </div>
       </div>
 
       <div class="p-4 bg-white text-dark">
-        <div class="d-flex justify-content-between align-items-center mb-3 pb-3 border-bottom">
+        <div class="d-flex justify-content-between align-items-center mb-3 pb-3 border-bottom flex-wrap gap-2">
           <div>
-            <div class="text-secondary text-uppercase fw-bold small" style="font-size: 11px;">Current Release</div>
-            <div class="h4 text-dark fw-bold mb-0">HTML5 &amp; CSS3 Project Guide</div>
+            <div class="text-secondary text-uppercase fw-bold" style="font-size: 11px;">Current Active Pipeline</div>
+            <div class="h4 text-dark fw-bold mb-0">Academic &amp; Engineering Publications</div>
           </div>
-          <div>
-            <span class="badge bg-warning text-dark"><i class="bi bi-clock me-1"></i>In Review</span>
+          <div class="d-flex gap-2">
+            <span class="badge bg-warning text-dark px-3 py-2"><i class="bi bi-clock me-1"></i>1 Pending Review</span>
+            <span class="badge bg-success px-3 py-2"><i class="bi bi-check-circle me-1"></i>2 Published</span>
           </div>
         </div>
 
         <div class="table-responsive">
-          <table class="table align-middle mb-0">
+          <table class="table table-hover align-middle mb-0">
             <thead>
               <tr class="text-secondary small text-uppercase">
-                <th>Action</th>
-                <th>Article</th>
+                <th>Article Title</th>
                 <th>Category</th>
                 <th>Author</th>
-                <th>Status</th>
+                <th>Stage</th>
+                <th>Action</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong>Publish</strong></td>
-                <td>HTML5 &amp; CSS3 Project Guide</td>
-                <td>Web Development</td>
+                <td>
+                  <span class="fw-bold text-dark">HTML5 &amp; CSS3 Project Guide</span>
+                  <div class="text-secondary small">Comprehensive web design workflow documentation</div>
+                </td>
+                <td><span class="badge bg-light text-dark border">Web Development</span></td>
                 <td>Devansh</td>
-                <td><span class="text-warning fw-bold">In Review</span></td>
+                <td><span class="badge bg-warning text-dark"><i class="bi bi-clock me-1"></i>In Review</span></td>
+                <td><a href="editor.html" class="btn btn-outline-dark btn-sm rounded-pill px-3">Review</a></td>
               </tr>
               <tr>
-                <td><strong>View</strong></td>
-                <td>Database Management Systems</td>
-                <td>Database</td>
+                <td>
+                  <span class="fw-bold text-dark">Database Management Systems</span>
+                  <div class="text-secondary small">Relational database schemas and query indexing</div>
+                </td>
+                <td><span class="badge bg-light text-dark border">Database</span></td>
                 <td>Ayush</td>
-                <td><span class="text-success fw-bold">Published</span></td>
+                <td><span class="badge bg-success"><i class="bi bi-check-circle me-1"></i>Published</span></td>
+                <td><a href="board.html" class="btn btn-outline-dark btn-sm rounded-pill px-3">View</a></td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
 
-      <div class="p-3 bg-light border-top d-flex justify-content-between align-items-center">
-        <span class="text-secondary small">Ready to explore the full editorial environment?</span>
-        <a href="dashboard.html" class="btn btn-orange btn-sm rounded-pill px-3">Open Interactive Dashboard &rarr;</a>
+      <div class="p-3 bg-light border-top d-flex justify-content-between align-items-center flex-wrap gap-2">
+        <span class="text-secondary small">Experience the complete studio dashboard and workflow management.</span>
+        <a href="dashboard.html" class="btn btn-orange btn-sm rounded-pill px-3 fw-bold">Explore Full Dashboard &rarr;</a>
       </div>
     </div>
 
     <div class="row g-4 mb-5">
       <div class="col-md-4">
-        <div class="card bg-dark border-secondary p-4 h-100">
-          <div class="h5 text-white fw-bold mb-2"><i class="bi bi-diagram-3 text-danger me-2"></i>Structured Workflow</div>
-          <div class="text-secondary small">Plan, write, and manage articles across clear stages from initial draft to final publication.</div>
+        <div class="card bg-dark border-secondary p-4 h-100 rounded-3">
+          <div class="h5 text-white fw-bold mb-2">
+            <i class="bi bi-diagram-3 text-danger me-2"></i>Structured Stages
+          </div>
+          <p class="text-secondary small mb-0">
+            Organize articles into clear stages: Drafts, Peer Review, and Published Releases with real-time tracking.
+          </p>
         </div>
       </div>
+
       <div class="col-md-4">
-        <div class="card bg-dark border-secondary p-4 h-100">
-          <div class="h5 text-white fw-bold mb-2"><i class="bi bi-kanban text-warning me-2"></i>Visual Kanban Board</div>
-          <div class="text-secondary small">Track status and review articles across customizable stages with an intuitive column board.</div>
+        <div class="card bg-dark border-secondary p-4 h-100 rounded-3">
+          <div class="h5 text-white fw-bold mb-2">
+            <i class="bi bi-kanban text-warning me-2"></i>Visual Kanban Board
+          </div>
+          <p class="text-secondary small mb-0">
+            Inspect stories column by column. Evaluate team submissions and move articles through the publication cycle.
+          </p>
         </div>
       </div>
+
       <div class="col-md-4">
-        <div class="card bg-dark border-secondary p-4 h-100">
-          <div class="h5 text-white fw-bold mb-2"><i class="bi bi-bootstrap text-primary me-2"></i>Bootstrap 5 Powered</div>
-          <div class="text-secondary small">Clean responsive grid system, dark theme mode, and standard UI utility classes.</div>
+        <div class="card bg-dark border-secondary p-4 h-100 rounded-3">
+          <div class="h5 text-white fw-bold mb-2">
+            <i class="bi bi-bootstrap text-primary me-2"></i>Bootstrap 5.3 System
+          </div>
+          <p class="text-secondary small mb-0">
+            Standard responsive grid system, dark mode tokens, accessible buttons, and Bootstrap Icons.
+          </p>
         </div>
+      </div>
+    </div>
+
+    <div class="card bg-dark border-secondary p-3 text-center mb-4">
+      <div class="d-flex justify-content-center align-items-center flex-wrap gap-3 small text-secondary">
+        <span class="fw-bold text-white"><i class="bi bi-cpu me-1 text-danger"></i>Tech Stack:</span>
+        <span class="badge bg-black border border-secondary text-white">HTML5 Semantic</span>
+        <span class="badge bg-black border border-secondary text-white">CSS3 Modern</span>
+        <span class="badge bg-black border border-secondary text-white">Bootstrap 5.3</span>
+        <span class="badge bg-black border border-secondary text-white">Bootstrap Icons</span>
+        <span class="badge bg-black border border-secondary text-white">Git Version Control</span>
       </div>
     </div>
   </div>
 
-  <footer class="border-top border-secondary py-4 text-center text-secondary small">
-    <div class="d-flex justify-content-center gap-3 mb-2">
+  <footer class="border-top border-secondary py-4 text-center text-secondary small bg-black">
+    <div class="d-flex justify-content-center gap-3 mb-2 flex-wrap">
       <a href="index.html" class="text-secondary text-decoration-none">Home</a>
+      <span class="text-secondary">&bull;</span>
       <a href="dashboard.html" class="text-secondary text-decoration-none">Dashboard</a>
+      <span class="text-secondary">&bull;</span>
       <a href="board.html" class="text-secondary text-decoration-none">Workflow Board</a>
+      <span class="text-secondary">&bull;</span>
       <a href="editor.html" class="text-secondary text-decoration-none">Article Editor</a>
     </div>
     <p class="mb-0">Editorial Workflow &amp; Content Studio &bull; Mini Project 2026 &bull; Developed by Devansh &amp; Ayush</p>
