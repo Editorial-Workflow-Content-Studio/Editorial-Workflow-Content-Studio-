@@ -5,9 +5,9 @@ body {
 }
 
 .sidebar {
-  width: 220px;
-  background-color: #0c0c0c;
-  border-right: 1px solid #222222;
+  width: 230px;
+  background-color: #0a0a0a;
+  border-right: 1px solid #1f1f1f;
   position: fixed;
   top: 0;
   left: 0;
@@ -18,65 +18,67 @@ body {
 }
 
 .sidebar-header {
-  padding: 18px 16px;
-  border-bottom: 1px solid #222222;
+  padding: 20px 18px;
+  border-bottom: 1px solid #1f1f1f;
 }
 
 .sidebar-menu {
   flex: 1;
-  padding: 14px 10px;
+  padding: 16px 12px;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
 }
 
 .nav-link {
-  display: block;
-  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
   color: #888888;
-  border-radius: 4px;
+  border-radius: 6px;
   font-size: 13px;
   font-weight: 500;
   text-decoration: none;
 }
 
 .nav-link:hover {
-  background-color: #161616;
+  background-color: #141414;
   color: #ffffff;
 }
 
 .nav-link.active {
-  background-color: #1c1c1c;
+  background-color: #1a1a1a;
   color: #ffffff !important;
   border-left: 3px solid #f04023;
   font-weight: bold;
 }
 
 .sidebar-user {
-  padding: 14px 16px;
-  border-top: 1px solid #222222;
+  padding: 14px 18px;
+  border-top: 1px solid #1f1f1f;
   display: flex;
   align-items: center;
   gap: 10px;
-  background-color: #080808;
+  background-color: #060606;
 }
 
 .user-avatar {
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
   background-color: #f04023;
   color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: bold;
 }
 
 .main-content {
-  margin-left: 220px;
-  padding: 24px;
+  margin-left: 230px;
+  padding: 26px 30px;
   min-height: 100vh;
 }
 
@@ -92,15 +94,20 @@ body {
 }
 
 .stat-card-accent-orange {
-  border-left: 3px solid #f04023 !important;
+  border-left: 4px solid #f04023 !important;
 }
 
 .stat-card-accent-green {
-  border-left: 3px solid #198754 !important;
+  border-left: 4px solid #198754 !important;
 }
 
 .stat-card-accent-blue {
-  border-left: 3px solid #0d6efd !important;
+  border-left: 4px solid #0d6efd !important;
+}
+
+.card-dark {
+  background-color: #0c0c0c;
+  border: 1px solid #1f1f1f;
 }
 
 @media (max-width: 768px) {
@@ -110,5 +117,6 @@ body {
   }
   .main-content {
     margin-left: 0;
+    padding: 16px;
   }
 }

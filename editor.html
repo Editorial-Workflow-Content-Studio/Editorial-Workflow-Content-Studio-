@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Article Editor - Editorial Studio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <style>
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -13,9 +14,9 @@ body {
 }
 
 .sidebar {
-  width: 220px;
-  background-color: #0c0c0c;
-  border-right: 1px solid #222222;
+  width: 230px;
+  background-color: #0a0a0a;
+  border-right: 1px solid #1f1f1f;
   position: fixed;
   top: 0;
   left: 0;
@@ -26,65 +27,67 @@ body {
 }
 
 .sidebar-header {
-  padding: 18px 16px;
-  border-bottom: 1px solid #222222;
+  padding: 20px 18px;
+  border-bottom: 1px solid #1f1f1f;
 }
 
 .sidebar-menu {
   flex: 1;
-  padding: 14px 10px;
+  padding: 16px 12px;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
 }
 
 .nav-link {
-  display: block;
-  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
   color: #888888;
-  border-radius: 4px;
+  border-radius: 6px;
   font-size: 13px;
   font-weight: 500;
   text-decoration: none;
 }
 
 .nav-link:hover {
-  background-color: #161616;
+  background-color: #141414;
   color: #ffffff;
 }
 
 .nav-link.active {
-  background-color: #1c1c1c;
+  background-color: #1a1a1a;
   color: #ffffff !important;
   border-left: 3px solid #f04023;
   font-weight: bold;
 }
 
 .sidebar-user {
-  padding: 14px 16px;
-  border-top: 1px solid #222222;
+  padding: 14px 18px;
+  border-top: 1px solid #1f1f1f;
   display: flex;
   align-items: center;
   gap: 10px;
-  background-color: #080808;
+  background-color: #060606;
 }
 
 .user-avatar {
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
   background-color: #f04023;
   color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: bold;
 }
 
 .main-content {
-  margin-left: 220px;
-  padding: 24px;
+  margin-left: 230px;
+  padding: 26px 30px;
   min-height: 100vh;
 }
 
@@ -99,6 +102,11 @@ body {
   color: #ffffff;
 }
 
+.card-dark {
+  background-color: #0c0c0c;
+  border: 1px solid #1f1f1f;
+}
+
 @media (max-width: 768px) {
   .sidebar {
     position: static;
@@ -106,6 +114,7 @@ body {
   }
   .main-content {
     margin-left: 0;
+    padding: 16px;
   }
 }
   </style>
@@ -119,12 +128,11 @@ body {
     </div>
 
     <div class="sidebar-menu">
-      <div class="text-secondary text-uppercase px-2 py-1 small fw-bold" style="font-size: 10px;">Navigation</div>
-      <a href="index.html" class="nav-link">Home (Landing)</a>
-      <a href="dashboard.html" class="nav-link">Dashboard</a>
-      <a href="content.html" class="nav-link">All Articles</a>
-      <a href="board.html" class="nav-link">Editorial Board</a>
-      <a href="editor.html" class="nav-link btn-orange rounded-pill text-center text-white mt-2 py-2 fw-bold active">+ Write Article</a>
+      <div class="text-secondary text-uppercase px-2 py-1 small fw-bold" style="font-size: 10px;">Menu</div>
+      <a href="index.html" class="nav-link"><i class="bi bi-house-door"></i> Home (Landing)</a>
+      <a href="dashboard.html" class="nav-link"><i class="bi bi-speedometer2"></i> Dashboard</a>
+      <a href="board.html" class="nav-link"><i class="bi bi-kanban"></i> Editorial Board</a>
+      <a href="editor.html" class="nav-link btn-orange rounded-pill text-center text-white mt-3 py-2 fw-bold active justify-content-center"><i class="bi bi-pencil-square"></i> Write Article</a>
     </div>
 
     <div class="sidebar-user">
@@ -137,20 +145,22 @@ body {
   </div>
 
   <div class="main-content">
-    <div class="card bg-dark border-secondary p-3 mb-4">
+    <div class="card card-dark p-4 mb-4">
       <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
         <div>
           <h1 class="h4 text-white fw-bold mb-1">Article Editor</h1>
           <p class="text-secondary small mb-0">Submit or edit article details in dark studio.</p>
         </div>
         <div>
-          <a href="content.html" class="btn btn-outline-secondary btn-sm rounded-pill px-3">Back to List</a>
+          <a href="dashboard.html" class="btn btn-outline-secondary btn-sm rounded-pill px-3"><i class="bi bi-arrow-left me-1"></i>Back to Dashboard</a>
         </div>
       </div>
     </div>
 
-    <div class="card bg-dark border-secondary p-4">
-      <div class="fw-bold text-white mb-3 pb-2 border-bottom border-secondary">Article Form</div>
+    <div class="card card-dark p-4">
+      <div class="fw-bold text-white mb-3 pb-2 border-bottom border-secondary d-flex align-items-center gap-2">
+        <i class="bi bi-file-earmark-diff text-danger"></i> Article Submission Form
+      </div>
 
       <div class="row g-3 mb-3">
         <div class="col-md-6">
@@ -183,13 +193,13 @@ body {
 
       <div class="mb-4">
         <label class="form-label text-secondary small text-uppercase fw-bold">Article Content</label>
-        <textarea class="form-control bg-dark text-white border-secondary" rows="5">A responsive editorial workflow interface built using semantic HTML5, CSS3, and Bootstrap 5 for college mini project.</textarea>
+        <textarea class="form-control bg-dark text-white border-secondary" rows="4">A responsive editorial workflow interface built using semantic HTML5, CSS3, and Bootstrap 5 for college mini project.</textarea>
       </div>
 
       <div class="d-flex gap-2">
-        <button class="btn btn-outline-secondary rounded-pill px-3">Save Draft</button>
-        <button class="btn btn-orange rounded-pill px-4 fw-bold">Submit for Review</button>
-        <a href="content.html" class="btn btn-outline-secondary rounded-pill px-3">Cancel</a>
+        <button class="btn btn-outline-secondary rounded-pill px-3"><i class="bi bi-save me-1"></i>Save Draft</button>
+        <button class="btn btn-orange rounded-pill px-4 fw-bold"><i class="bi bi-send me-1"></i>Submit for Review</button>
+        <a href="dashboard.html" class="btn btn-outline-secondary rounded-pill px-3">Cancel</a>
       </div>
     </div>
   </div>

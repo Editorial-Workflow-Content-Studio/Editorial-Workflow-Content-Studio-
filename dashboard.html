@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard - Editorial Studio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <style>
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -13,9 +14,9 @@ body {
 }
 
 .sidebar {
-  width: 220px;
-  background-color: #0c0c0c;
-  border-right: 1px solid #222222;
+  width: 230px;
+  background-color: #0a0a0a;
+  border-right: 1px solid #1f1f1f;
   position: fixed;
   top: 0;
   left: 0;
@@ -26,65 +27,67 @@ body {
 }
 
 .sidebar-header {
-  padding: 18px 16px;
-  border-bottom: 1px solid #222222;
+  padding: 20px 18px;
+  border-bottom: 1px solid #1f1f1f;
 }
 
 .sidebar-menu {
   flex: 1;
-  padding: 14px 10px;
+  padding: 16px 12px;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
 }
 
 .nav-link {
-  display: block;
-  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
   color: #888888;
-  border-radius: 4px;
+  border-radius: 6px;
   font-size: 13px;
   font-weight: 500;
   text-decoration: none;
 }
 
 .nav-link:hover {
-  background-color: #161616;
+  background-color: #141414;
   color: #ffffff;
 }
 
 .nav-link.active {
-  background-color: #1c1c1c;
+  background-color: #1a1a1a;
   color: #ffffff !important;
   border-left: 3px solid #f04023;
   font-weight: bold;
 }
 
 .sidebar-user {
-  padding: 14px 16px;
-  border-top: 1px solid #222222;
+  padding: 14px 18px;
+  border-top: 1px solid #1f1f1f;
   display: flex;
   align-items: center;
   gap: 10px;
-  background-color: #080808;
+  background-color: #060606;
 }
 
 .user-avatar {
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
   background-color: #f04023;
   color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: bold;
 }
 
 .main-content {
-  margin-left: 220px;
-  padding: 24px;
+  margin-left: 230px;
+  padding: 26px 30px;
   min-height: 100vh;
 }
 
@@ -100,15 +103,20 @@ body {
 }
 
 .stat-card-accent-orange {
-  border-left: 3px solid #f04023 !important;
+  border-left: 4px solid #f04023 !important;
 }
 
 .stat-card-accent-green {
-  border-left: 3px solid #198754 !important;
+  border-left: 4px solid #198754 !important;
 }
 
 .stat-card-accent-blue {
-  border-left: 3px solid #0d6efd !important;
+  border-left: 4px solid #0d6efd !important;
+}
+
+.card-dark {
+  background-color: #0c0c0c;
+  border: 1px solid #1f1f1f;
 }
 
 @media (max-width: 768px) {
@@ -118,6 +126,7 @@ body {
   }
   .main-content {
     margin-left: 0;
+    padding: 16px;
   }
 }
   </style>
@@ -131,12 +140,11 @@ body {
     </div>
 
     <div class="sidebar-menu">
-      <div class="text-secondary text-uppercase px-2 py-1 small fw-bold" style="font-size: 10px;">Navigation</div>
-      <a href="index.html" class="nav-link">Home (Landing)</a>
-      <a href="dashboard.html" class="nav-link active">Dashboard</a>
-      <a href="content.html" class="nav-link">All Articles</a>
-      <a href="board.html" class="nav-link">Editorial Board</a>
-      <a href="editor.html" class="nav-link btn-orange rounded-pill text-center text-white mt-2 py-2 fw-bold">+ Write Article</a>
+      <div class="text-secondary text-uppercase px-2 py-1 small fw-bold" style="font-size: 10px;">Menu</div>
+      <a href="index.html" class="nav-link"><i class="bi bi-house-door"></i> Home (Landing)</a>
+      <a href="dashboard.html" class="nav-link active"><i class="bi bi-speedometer2"></i> Dashboard</a>
+      <a href="board.html" class="nav-link"><i class="bi bi-kanban"></i> Editorial Board</a>
+      <a href="editor.html" class="nav-link btn-orange rounded-pill text-center text-white mt-3 py-2 fw-bold justify-content-center"><i class="bi bi-pencil-square"></i> Write Article</a>
     </div>
 
     <div class="sidebar-user">
@@ -149,56 +157,79 @@ body {
   </div>
 
   <div class="main-content">
-    <div class="card bg-dark border-secondary p-3 mb-4">
-      <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+    <div class="card card-dark p-4 mb-4">
+      <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
         <div>
-          <h1 class="h4 text-white fw-bold mb-1">Editorial Dashboard</h1>
-          <p class="text-secondary small mb-0">Welcome back, Devansh. Workspace overview.</p>
+          <div class="d-flex align-items-center gap-2 mb-1">
+            <h1 class="h4 text-white fw-bold mb-0">Editorial Dashboard</h1>
+            <span class="badge bg-secondary">Bootstrap 5.3</span>
+          </div>
+          <p class="text-secondary small mb-0">Welcome back, Devansh. Content workflow management workspace.</p>
         </div>
         <div class="d-flex gap-2">
-          <a href="index.html" class="btn btn-outline-secondary btn-sm rounded-pill px-3">Landing Page</a>
-          <a href="board.html" class="btn btn-outline-secondary btn-sm rounded-pill px-3">Board</a>
-          <a href="editor.html" class="btn btn-orange btn-sm rounded-pill px-3 fw-bold">+ New Article</a>
+          <a href="index.html" class="btn btn-outline-secondary btn-sm rounded-pill px-3"><i class="bi bi-arrow-left me-1"></i>Landing</a>
+          <a href="board.html" class="btn btn-outline-secondary btn-sm rounded-pill px-3"><i class="bi bi-kanban me-1"></i>Board</a>
+          <a href="editor.html" class="btn btn-orange btn-sm rounded-pill px-3 fw-bold"><i class="bi bi-plus-lg me-1"></i>New Article</a>
         </div>
       </div>
     </div>
 
     <div class="row g-3 mb-4">
       <div class="col-md-4">
-        <div class="card bg-dark border-secondary stat-card-accent-blue h-100 p-3">
-          <div class="text-secondary text-uppercase fw-bold small">Total Articles</div>
+        <div class="card card-dark stat-card-accent-blue h-100 p-3">
+          <div class="d-flex justify-content-between align-items-center text-secondary mb-1">
+            <span class="text-uppercase fw-bold small">Total Articles</span>
+            <i class="bi bi-file-earmark-text fs-5"></i>
+          </div>
           <div class="h2 text-white fw-bold my-1">3</div>
-          <div class="text-secondary small">Semester project</div>
+          <div class="text-secondary small mb-2">Active in pipeline</div>
+          <div class="progress bg-secondary" style="height: 4px;">
+            <div class="progress-bar bg-primary" style="width: 100%;"></div>
+          </div>
         </div>
       </div>
+
       <div class="col-md-4">
-        <div class="card bg-dark border-secondary stat-card-accent-orange h-100 p-3">
-          <div class="text-secondary text-uppercase fw-bold small">In Review</div>
+        <div class="card card-dark stat-card-accent-orange h-100 p-3">
+          <div class="d-flex justify-content-between align-items-center text-secondary mb-1">
+            <span class="text-uppercase fw-bold small">In Review</span>
+            <i class="bi bi-clock-history fs-5 text-warning"></i>
+          </div>
           <div class="h2 text-white fw-bold my-1">1</div>
-          <div class="text-secondary small">Pending approval</div>
+          <div class="text-secondary small mb-2">Pending editorial approval</div>
+          <div class="progress bg-secondary" style="height: 4px;">
+            <div class="progress-bar bg-warning" style="width: 33%;"></div>
+          </div>
         </div>
       </div>
+
       <div class="col-md-4">
-        <div class="card bg-dark border-secondary stat-card-accent-green h-100 p-3">
-          <div class="text-secondary text-uppercase fw-bold small">Published</div>
+        <div class="card card-dark stat-card-accent-green h-100 p-3">
+          <div class="d-flex justify-content-between align-items-center text-secondary mb-1">
+            <span class="text-uppercase fw-bold small">Published</span>
+            <i class="bi bi-check-circle fs-5 text-success"></i>
+          </div>
           <div class="h2 text-white fw-bold my-1">2</div>
-          <div class="text-secondary small">Live on studio</div>
+          <div class="text-secondary small mb-2">Live on platform</div>
+          <div class="progress bg-secondary" style="height: 4px;">
+            <div class="progress-bar bg-success" style="width: 67%;"></div>
+          </div>
         </div>
       </div>
     </div>
 
     <div class="row g-3">
       <div class="col-lg-8">
-        <div class="card bg-dark border-secondary">
-          <div class="card-header bg-dark border-secondary d-flex justify-content-between align-items-center py-3">
-            <span class="fw-bold text-white">Recent Articles</span>
-            <a href="content.html" class="btn btn-outline-secondary btn-sm rounded-pill px-3">View All</a>
+        <div class="card card-dark h-100">
+          <div class="card-header card-dark d-flex justify-content-between align-items-center py-3">
+            <span class="fw-bold text-white"><i class="bi bi-journal-text me-2"></i>Editorial Articles</span>
+            <span class="badge bg-secondary">2 stories</span>
           </div>
           <div class="table-responsive">
             <table class="table table-dark table-hover align-middle mb-0">
               <thead>
                 <tr class="text-secondary small text-uppercase">
-                  <th>Title</th>
+                  <th>Article</th>
                   <th>Author</th>
                   <th>Status</th>
                   <th>Action</th>
@@ -206,16 +237,32 @@ body {
               </thead>
               <tbody>
                 <tr>
-                  <td><strong class="text-white">HTML5 &amp; CSS3 Project Guide</strong></td>
-                  <td>Devansh</td>
-                  <td><span class="badge bg-warning text-dark">In Review</span></td>
-                  <td><a href="editor.html" class="btn btn-orange btn-sm rounded-pill px-3">Edit</a></td>
+                  <td>
+                    <div class="fw-bold text-white">HTML5 &amp; CSS3 Project Guide</div>
+                    <div class="text-secondary small">Web Development</div>
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center gap-2">
+                      <span class="badge rounded-circle bg-danger p-1" style="width: 18px; height: 18px;">D</span>
+                      <span class="small">Devansh</span>
+                    </div>
+                  </td>
+                  <td><span class="badge bg-warning text-dark"><i class="bi bi-clock me-1"></i>In Review</span></td>
+                  <td><a href="editor.html" class="btn btn-orange btn-sm rounded-pill px-3"><i class="bi bi-pencil me-1"></i>Edit</a></td>
                 </tr>
                 <tr>
-                  <td><strong class="text-white">Database Management Systems</strong></td>
-                  <td>Ayush</td>
-                  <td><span class="badge bg-success">Published</span></td>
-                  <td><a href="editor.html" class="btn btn-outline-secondary btn-sm rounded-pill px-3">View</a></td>
+                  <td>
+                    <div class="fw-bold text-white">Database Management Systems</div>
+                    <div class="text-secondary small">Database Core</div>
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center gap-2">
+                      <span class="badge rounded-circle bg-success p-1" style="width: 18px; height: 18px;">A</span>
+                      <span class="small">Ayush</span>
+                    </div>
+                  </td>
+                  <td><span class="badge bg-success"><i class="bi bi-check2 me-1"></i>Published</span></td>
+                  <td><a href="editor.html" class="btn btn-outline-secondary btn-sm rounded-pill px-3"><i class="bi bi-eye me-1"></i>View</a></td>
                 </tr>
               </tbody>
             </table>
@@ -224,35 +271,35 @@ body {
       </div>
 
       <div class="col-lg-4">
-        <div class="card bg-dark border-secondary mb-3">
-          <div class="card-header bg-dark border-secondary fw-bold text-white py-3">
-            Workflow Stages
+        <div class="card card-dark mb-3">
+          <div class="card-header card-dark fw-bold text-white py-3">
+            <i class="bi bi-diagram-3 me-2"></i>Workflow Stages
           </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item bg-dark border-secondary d-flex justify-content-between align-items-center py-2">
-              <span class="small text-white">Draft Articles</span>
+            <li class="list-group-item card-dark d-flex justify-content-between align-items-center py-2">
+              <span class="small text-white"><i class="bi bi-dot text-secondary fs-5"></i>Draft Articles</span>
               <span class="badge bg-secondary rounded-pill">1</span>
             </li>
-            <li class="list-group-item bg-dark border-secondary d-flex justify-content-between align-items-center py-2">
-              <span class="small text-white">In Review</span>
+            <li class="list-group-item card-dark d-flex justify-content-between align-items-center py-2">
+              <span class="small text-white"><i class="bi bi-dot text-warning fs-5"></i>In Review</span>
               <span class="badge bg-warning text-dark rounded-pill">1</span>
             </li>
-            <li class="list-group-item bg-dark border-secondary d-flex justify-content-between align-items-center py-2">
-              <span class="small text-white">Published</span>
+            <li class="list-group-item card-dark d-flex justify-content-between align-items-center py-2">
+              <span class="small text-white"><i class="bi bi-dot text-success fs-5"></i>Published</span>
               <span class="badge bg-success rounded-pill">2</span>
             </li>
           </ul>
         </div>
 
-        <div class="card bg-dark border-secondary">
-          <div class="card-header bg-dark border-secondary fw-bold text-white py-3">
-            Project Details
+        <div class="card card-dark">
+          <div class="card-header card-dark fw-bold text-white py-3">
+            <i class="bi bi-info-circle me-2"></i>Project Details
           </div>
           <div class="card-body">
-            <div class="fw-bold text-white small">Presentation Stage</div>
-            <div class="text-secondary small mb-2">Editorial Workflow Content Studio</div>
-            <div class="fw-bold text-white small">Team Members</div>
-            <div class="text-secondary small">Devansh &amp; Ayush</div>
+            <div class="fw-bold text-white small mb-1">Presentation Stage</div>
+            <div class="text-secondary small mb-3">Editorial Workflow Content Studio</div>
+            <div class="fw-bold text-white small mb-1">Team Members</div>
+            <div class="text-secondary small"><i class="bi bi-person me-1"></i>Devansh &amp; Ayush</div>
           </div>
         </div>
       </div>

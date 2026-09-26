@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Editorial Board - Editorial Studio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <style>
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -13,9 +14,9 @@ body {
 }
 
 .sidebar {
-  width: 220px;
-  background-color: #0c0c0c;
-  border-right: 1px solid #222222;
+  width: 230px;
+  background-color: #0a0a0a;
+  border-right: 1px solid #1f1f1f;
   position: fixed;
   top: 0;
   left: 0;
@@ -26,65 +27,67 @@ body {
 }
 
 .sidebar-header {
-  padding: 18px 16px;
-  border-bottom: 1px solid #222222;
+  padding: 20px 18px;
+  border-bottom: 1px solid #1f1f1f;
 }
 
 .sidebar-menu {
   flex: 1;
-  padding: 14px 10px;
+  padding: 16px 12px;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
 }
 
 .nav-link {
-  display: block;
-  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
   color: #888888;
-  border-radius: 4px;
+  border-radius: 6px;
   font-size: 13px;
   font-weight: 500;
   text-decoration: none;
 }
 
 .nav-link:hover {
-  background-color: #161616;
+  background-color: #141414;
   color: #ffffff;
 }
 
 .nav-link.active {
-  background-color: #1c1c1c;
+  background-color: #1a1a1a;
   color: #ffffff !important;
   border-left: 3px solid #f04023;
   font-weight: bold;
 }
 
 .sidebar-user {
-  padding: 14px 16px;
-  border-top: 1px solid #222222;
+  padding: 14px 18px;
+  border-top: 1px solid #1f1f1f;
   display: flex;
   align-items: center;
   gap: 10px;
-  background-color: #080808;
+  background-color: #060606;
 }
 
 .user-avatar {
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
   background-color: #f04023;
   color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: bold;
 }
 
 .main-content {
-  margin-left: 220px;
-  padding: 24px;
+  margin-left: 230px;
+  padding: 26px 30px;
   min-height: 100vh;
 }
 
@@ -99,21 +102,18 @@ body {
   color: #ffffff;
 }
 
-.author-dot {
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background-color: #f04023;
-  color: #ffffff;
-  font-size: 9px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
+.card-dark {
+  background-color: #0c0c0c;
+  border: 1px solid #1f1f1f;
 }
 
-.author-dot.green {
-  background-color: #198754;
+.card-inner {
+  background-color: #141414;
+  border: 1px solid #242424;
+}
+
+.card-inner:hover {
+  border-color: #383838;
 }
 
 @media (max-width: 768px) {
@@ -123,6 +123,7 @@ body {
   }
   .main-content {
     margin-left: 0;
+    padding: 16px;
   }
 }
   </style>
@@ -136,12 +137,11 @@ body {
     </div>
 
     <div class="sidebar-menu">
-      <div class="text-secondary text-uppercase px-2 py-1 small fw-bold" style="font-size: 10px;">Navigation</div>
-      <a href="index.html" class="nav-link">Home (Landing)</a>
-      <a href="dashboard.html" class="nav-link">Dashboard</a>
-      <a href="content.html" class="nav-link">All Articles</a>
-      <a href="board.html" class="nav-link active">Editorial Board</a>
-      <a href="editor.html" class="nav-link btn-orange rounded-pill text-center text-white mt-2 py-2 fw-bold">+ Write Article</a>
+      <div class="text-secondary text-uppercase px-2 py-1 small fw-bold" style="font-size: 10px;">Menu</div>
+      <a href="index.html" class="nav-link"><i class="bi bi-house-door"></i> Home (Landing)</a>
+      <a href="dashboard.html" class="nav-link"><i class="bi bi-speedometer2"></i> Dashboard</a>
+      <a href="board.html" class="nav-link active"><i class="bi bi-kanban"></i> Editorial Board</a>
+      <a href="editor.html" class="nav-link btn-orange rounded-pill text-center text-white mt-3 py-2 fw-bold justify-content-center"><i class="bi bi-pencil-square"></i> Write Article</a>
     </div>
 
     <div class="sidebar-user">
@@ -154,35 +154,32 @@ body {
   </div>
 
   <div class="main-content">
-    <div class="card bg-dark border-secondary p-3 mb-4">
+    <div class="card card-dark p-4 mb-4">
       <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
         <div>
-          <h1 class="h4 text-white fw-bold mb-1">Editorial Board</h1>
-          <p class="text-secondary small mb-0">Visual pipeline of project articles across stages.</p>
+          <h1 class="h4 text-white fw-bold mb-1">Editorial Workflow Board</h1>
+          <p class="text-secondary small mb-0">Track and manage articles across pipeline stages.</p>
         </div>
         <div>
-          <a href="editor.html" class="btn btn-orange btn-sm rounded-pill px-3 fw-bold">+ Add Story</a>
+          <a href="editor.html" class="btn btn-orange btn-sm rounded-pill px-3 fw-bold"><i class="bi bi-plus-lg me-1"></i>Add Story</a>
         </div>
       </div>
     </div>
 
     <div class="row g-3">
       <div class="col-md-4">
-        <div class="card bg-dark border-secondary p-3 h-100">
+        <div class="card card-dark p-3 h-100">
           <div class="d-flex justify-content-between align-items-center mb-3">
-            <span class="fw-bold text-white">Drafts</span>
+            <span class="fw-bold text-white"><i class="bi bi-pencil me-2 text-secondary"></i>Drafts</span>
             <span class="badge bg-secondary rounded-pill">1</span>
           </div>
 
-          <div class="card bg-black border-secondary p-3 mb-2">
+          <div class="card card-inner p-3 mb-2">
             <div class="fw-bold text-white small mb-1">Computer Networks Notes</div>
             <div class="text-secondary small mb-2" style="font-size: 11px;">OSI layer models and TCP protocol basics.</div>
             <span class="badge bg-secondary mb-2" style="width: fit-content; font-size: 10px;">Networking</span>
             <div class="d-flex justify-content-between align-items-center pt-2 border-top border-secondary">
-              <div class="d-flex align-items-center gap-1">
-                <span class="author-dot">D</span>
-                <span class="text-secondary small" style="font-size: 11px;">Devansh</span>
-              </div>
+              <span class="text-secondary small" style="font-size: 11px;"><i class="bi bi-person me-1"></i>Devansh</span>
               <a href="editor.html" class="btn btn-outline-secondary btn-sm py-0 px-2" style="font-size: 11px;">Edit</a>
             </div>
           </div>
@@ -190,21 +187,18 @@ body {
       </div>
 
       <div class="col-md-4">
-        <div class="card bg-dark border-secondary p-3 h-100">
+        <div class="card card-dark p-3 h-100">
           <div class="d-flex justify-content-between align-items-center mb-3">
-            <span class="fw-bold text-white">In Review</span>
+            <span class="fw-bold text-white"><i class="bi bi-clock-history me-2 text-warning"></i>In Review</span>
             <span class="badge bg-warning text-dark rounded-pill">1</span>
           </div>
 
-          <div class="card bg-black border-secondary p-3 mb-2">
+          <div class="card card-inner p-3 mb-2">
             <div class="fw-bold text-white small mb-1">HTML5 &amp; CSS3 Project Guide</div>
             <div class="text-secondary small mb-2" style="font-size: 11px;">Semantic structure and responsive web design.</div>
             <span class="badge bg-secondary mb-2" style="width: fit-content; font-size: 10px;">Web Dev</span>
             <div class="d-flex justify-content-between align-items-center pt-2 border-top border-secondary">
-              <div class="d-flex align-items-center gap-1">
-                <span class="author-dot">D</span>
-                <span class="text-secondary small" style="font-size: 11px;">Devansh</span>
-              </div>
+              <span class="text-secondary small" style="font-size: 11px;"><i class="bi bi-person me-1"></i>Devansh</span>
               <a href="editor.html" class="btn btn-orange btn-sm py-0 px-2" style="font-size: 11px;">Review</a>
             </div>
           </div>
@@ -212,21 +206,18 @@ body {
       </div>
 
       <div class="col-md-4">
-        <div class="card bg-dark border-secondary p-3 h-100">
+        <div class="card card-dark p-3 h-100">
           <div class="d-flex justify-content-between align-items-center mb-3">
-            <span class="fw-bold text-white">Published</span>
+            <span class="fw-bold text-white"><i class="bi bi-check-circle me-2 text-success"></i>Published</span>
             <span class="badge bg-success rounded-pill">1</span>
           </div>
 
-          <div class="card bg-black border-secondary p-3 mb-2">
+          <div class="card card-inner p-3 mb-2">
             <div class="fw-bold text-white small mb-1">Database Management Systems</div>
             <div class="text-secondary small mb-2" style="font-size: 11px;">Relational schema design and SQL indexing.</div>
             <span class="badge bg-secondary mb-2" style="width: fit-content; font-size: 10px;">Database</span>
             <div class="d-flex justify-content-between align-items-center pt-2 border-top border-secondary">
-              <div class="d-flex align-items-center gap-1">
-                <span class="author-dot green">A</span>
-                <span class="text-secondary small" style="font-size: 11px;">Ayush</span>
-              </div>
+              <span class="text-secondary small" style="font-size: 11px;"><i class="bi bi-person me-1"></i>Ayush</span>
               <span class="badge bg-success" style="font-size: 10px;">Live</span>
             </div>
           </div>
